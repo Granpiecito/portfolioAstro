@@ -4,10 +4,11 @@ const { pathname } = Astro.url;
 import { socials, info } from '../assets/data';
 ---
 
-<nav class="fixed w-full h-16 bg-black text-white flex items-center px-4 py-3 top-0 z-50 md:justify-between xs:justify-center">
+<nav class="w-full h-16 bg-black text-white flex items-center px-4 py-3 top-0 z-50 md:justify-between
+ xs:justify-center">
     <ul
-     class="grid justify-center xl:basis-[20%] md:basis-[25%] md:grid xs:hidden"
-    style={{gridTemplateColumns:`repeat(${socials.length + 1}, minmax(0, 1fr))` }}
+     class="justify-items-center xl:basis-[20%] md:basis-[28%] md:grid xs:hidden"
+    style={{gridTemplateColumns:`repeat(${socials.length}, minmax(0, 1fr))` }}
     >
         {
         socials.map((social) => (
@@ -21,7 +22,7 @@ import { socials, info } from '../assets/data';
         ))
         }
     </ul>
-<ul class="grid justify-items-center gap-x3 xl:basis-[20%] md:basis-[25%]"
+<ul class="grid justify-items-center gap-x-3 xl:basis-[20%] md:basis-[28%] sm:basis[40%] xs:basis[75%]"
 style={ {gridTemplateColumns:`repeat(${info.length + 1 }, minmax(0, 1fr))` }}
 >
         <li>
