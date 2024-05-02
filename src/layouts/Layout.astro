@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import { ViewTransitions } from "astro:transitions";
+import '../assets/style.css'
 ---
 
 <!doctype html>
@@ -15,17 +16,17 @@ import { ViewTransitions } from "astro:transitions";
         <meta name="description" content="Astro Description" />
         <meta name="viewport" content="width=device-width" />
         <link rel="" href="" />
-        <meta name="genearator" content={Astro.generator} />
+        <meta name="generator" content={Astro.generator} />
 
         <!-- Boxicons -->
         <link rel="stylesheet"
         href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-        
+
         <title>{title}</title>
         <ViewTransitions />
     </head>
 
-    <body>
+    <body class="bg-black text-white">
         <slot />
     </body>
 </html>
