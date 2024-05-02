@@ -1,16 +1,20 @@
 ---
-import { socials } from '../assets/data';
+const { pathname } = Astro.url;
+
+import { socials, info } from '../assets/data';
 ---
 
 <nav class="w-full h-16 bg-black text-white flex items-center px-4 py-3 top-0 z-50 justify-between">
-    <ul class="grid justify-items-center basis-[20%]"
-    style={{gridTemplateColumns:'repeat(${socials.length}, minmax(0,1fr)'}}>
+    <ul
+     class="grid justify-items-center basis-[20%]"
+    style={{gridTemplateColumns:`repeat(${socials.length}, minmax(0, 1fr))` }}
+    >
         {
         socials.map((social) => (
             <li>
                 <a 
                 href="#"
-                class="text-4xl opacity-50 hover:opacity-100 duration-300 ease-in cursor-pointer">
+                class="text-2xl opacity-50 hover:opacity-100 duration-300 ease-in cursor-pointer">
                 <i class = {social.logo}/>
                 </a>
                 </li>
@@ -19,7 +23,16 @@ import { socials } from '../assets/data';
     </ul>
 <ul class="grid justify-items-center gap-x3 basis-[20%]">
         <li>
-            <a class="opacity-70 hover:opacity-100 duration-300 text-[17px]" href="#Home">Home</a>
+            <a class="opacity-70 hover:opacity-100 duration-300 text-[17px] font-semibold"
+            href="#Home">Home</a>
         </li>
+        {
+            pathname === '/' &&
+             info.map((i)=>(
+                <li>
+                    <a href={`#${i.text.toLowerCase()}`}>{i.text}</a>
+                </li>
+            ))
+        }
     </ul>
 </nav>
