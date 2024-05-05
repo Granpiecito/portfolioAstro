@@ -1,9 +1,14 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import Separator from "../components/Separator.astro";
 import ProfilePicture from "../components/ProfilePicture.astro";
 ---
-<Layout title="JeanDev | Portfolio"> 
-<Navbar/>
-<ProfilePicture/>
+
+<Layout title="JeanDev | Portfolio">
+    <Navbar />
+    <main class="mt-16 scroll-mt-36">
+        <ProfilePicture />
+        <Separator/>
+    </main>
 </Layout>
