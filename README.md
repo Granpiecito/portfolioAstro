@@ -1,4 +1,14 @@
-# Astro Portfolio
+# Astro Portfolio\
+
+Change logs
+# Astro Portfolio\
+
+Change logs
+
+- [Version 1.0.0] - Initial release
+- [Version 1.1.0] - Added new features
+- [Version 1.2.0] - Bug fixes and performance improvements
+
 
 # Introduction
 
@@ -30,7 +40,8 @@ Inside of this Astro project, you'll see the following folders and files:
 |   |     └── ProfilePicture.astro
 |   |     └── Separator.astro
 |   └── assets/
-|   |       └── data.js
+|   |       └── js
+|   |           └── data.js
 |   |       └── styles.css
 |   └── img/
 |   |       └── profileimg.avif
