@@ -8,6 +8,7 @@ Change logs
 - [Version 1.0.0] - Initial release
 - [Version 1.1.0] - Added new features
 - [Version 1.2.0] - Bug fixes and performance improvements
+- [Version 1.3.0] - Changed font Player Start 2 to Signika Negative
 
 
 # Introduction
