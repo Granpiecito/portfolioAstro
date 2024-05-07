@@ -1,8 +1,43 @@
+<script>
+    const words = ["Hello, World!", "Welcome to my website!", "This is a typewriter effect."];
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+
+function type() {
+  currentWord = words[i];
+  if (isDeleting) {
+    const typewriterElement = document.getElementById("typewriter");
+    if (typewriterElement) {
+        typewriterElement.textContent = currentWord.substring(0, j-1);
+    }
+    j--;
+    if (j == 0) {
+      isDeleting = false;
+      i++;
+      if (i == words.length) {
+        i = 0;
+      }
+    }
+  } else {
+    const typewriterElement = document.getElementById("typewriter");
+    if (typewriterElement) {
+        typewriterElement.textContent = currentWord.substring(0, j+1);
+    } 
+    j++;
+    if (j == currentWord.length) {
+      isDeleting = true;
+    }
+  }
+  setTimeout(type, 100);
+}
+
+type();
+</script>
 <article class=" w-full h-[500px] overflow-hidden flex flex-col justify-center items-center relative md:px-20 xs:px-0">
     <header class="text-center absolute top-0 z-10">
-        <span class="block font-bold sm:text-[55px] sm:leading-[55px] xxs:text-[36px] xs:text-[26px] ">Lorem ipsum dolor sit</span>
-        <span class="block font-bold sm:text-[55px] sm:leading-[55px] xxs:text-[36px] xs:text-[26px] "> consectetur adipiscing </span>
-        <span class="block font-bold sm:text-[55px] sm:leading-[55px] xxs:text-[36px] xs:text-[26px] ">elit faucibus</span>
+        <h1 id="typewriter" class="text-6xl font-press-start"></h1>
     </header>
     <img src="/src/img/profileimg.avif" 
      class="object-cover fill h-[900px] object-top lg:-bottom-[20%] lg:w-[800px] md:w-[1000px]

@@ -12,6 +12,9 @@ export default {
 			//xl: '1280px',
 			//2xl: '1536px',
 			},
+			fontFamily: {
+				'press-start': ['"Press Start 2P"', 'Cursive'],
+			  }
 		},
 	},
 	plugins: [],
