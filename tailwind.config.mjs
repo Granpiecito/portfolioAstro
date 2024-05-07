@@ -13,7 +13,7 @@ export default {
 			//2xl: '1536px',
 			},
 			fontFamily: {
-				'press-start': ['"Press Start 2P"', 'Cursive'],
+				'signika-negative': ['"Signika Negative"', 'normal'],
 			  }
 		},
 	},
