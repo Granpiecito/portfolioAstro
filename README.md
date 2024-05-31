@@ -9,6 +9,7 @@ Change logs
 - [Version 1.1.0] - Added new features
 - [Version 1.2.0] - Bug fixes and performance improvements
 - [Version 1.3.0] - Changed font Player Start 2 to Signika Negative
+- [Version 1.4.0] - Added new things in about section, botton home linked to index.astro
 
 
 # Introduction
@@ -43,6 +44,7 @@ Inside of this Astro project, you'll see the following folders and files:
 |   └── assets/
 |   |       └── js
 |   |           └── data.js
+|   |           └── typewritter.js
 |   |       └── styles.css
 |   └── img/
 |   |       └── profileimg.avif
