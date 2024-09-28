@@ -17,79 +17,46 @@ export const info = [
 ];
 
 export const technologies = [
-    {
-        text: 'Java',
-        logo: 'bx bxl-java'
-    },
-    {
-        text: 'C++',
-        logo: '../img/Technologies/Languages/csharp.svg'
-    },
+    
     {
         text: 'Html',
-        logo: '../img/Technologies/Languages/html5.svg'
-    },
-    {
-        text: 'Css',
-        logo: '../img/Technologies/Languages/css.svg'
+        logo: '../src/img/Technologies/LanguagesP/html5.svg',
     },
     {
         text: 'Php',
-        logo: '../img/Technologies/Languages/Php_dark.svg'
+        logo: '../src/img/Technologies/LanguagesP/php_dark.svg',
     },
     {
         text: 'Flutter',
-        logo: '../img/Technologies/Languages/flutter.svg'
+        logo: '../src/img/Technologies/LanguagesP/flutter.svg',
     },
-    {
-        text: 'Dart',
-        logo: '../img/Technologies/Languages/dart.svg'
-    },
-    {
-        text: 'Typescript',
-        logo: '../img/Technologies/Languages/typescript.svg'
-    },
-
-];
-
-export const frameworks = [
     {
         text: 'Astro',
-        logo: '../img/Technologies/Frameworks/Astro_dark.svg'
-    },
-    {
-        text: 'Boostrap',
-        logo: '../img/Technologies/Frameworks/boostrap.svg'
+        logo: '../src/img/Technologies/Frameworks/Astro_dark.svg',
     },
     {
         text: 'Laravel',
-        logo: '../img/Technologies/Frameworks/laravel.svg'
+       logo: '../src/img/Technologies/Frameworks/laravel.svg',
     },
     {
         text: 'Springboot',
-        logo: '../img/Technologies/Frameworks/spring.svg'
-    },
-    {
-        text: 'Svelte',
-        logo: '../img/Technologies/Frameworks/svelte.svg'
+        logo: '../src/img/Technologies/Frameworks/spring.svg',
     },
     {
         text: 'Tailwind Css',
-        logo: '../img/Technologies/Frameworks/tailwindcss.svg'
+        logo: '../src/img/Technologies/Frameworks/tailwindcss.svg',
     },
-];
-
-export const dataBase = [
     {
         text: 'Mysql',
-        logo: '../img/Technologies/Data Base/mysql.svg'
+        logo: '../src/img/Technologies/Data Base/mysql.svg',
     },
     {
         text: 'Postgresql',
-        logo: '../img/Technologies/Data Base/postgresql.svg'
+        logo: '../src/img/Technologies/Data Base/postgresql.svg',
     },
     {
         text: 'Sql Server',
-        logo: '../img/Technologies/Data Base/sql-server.svg'
+        logo:'../src/img/Technologies/Data Base/sql-server.svg',
     },
+
 ];

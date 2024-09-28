@@ -1,25 +1,45 @@
 ---
-import {technologies, frameworks, dataBase} from '../assets/js/data.js'
+import {technologies} from '../assets/js/data';
+import TechnologyCards from './TechnologyCards.astro'
 ---
 
-<div class="w-[100%] mx-auto mt-20 mb-10">
+<div class="w-[75%] mx-auto mt-20 mb-10">
     <h2 class="cursor-pointer font-black w-fit md:mx-0 md:ml-5 sm:text-6xl xs:text-[40px] xs:mx-center">Technologies</h2>
 </div>
 
-<div class="overflow-x-hidden whitespace-nowrap cursor-pointer">
+<div class="overflow-x-auto whitespace-nowrap cursor-pointer">
     <div class="tech-card inline-block">
         {
-            technologies.map((technologies) => (
-                <ul>
-                    <a
-                    href="#"
-                    class="text-2xl opcacity-50 hover:opacity-100 duration-300 ease-in cursor-pointer">
-                        <i class = {technologies.logo}/>
-
-                    </a>
-                </ul>
-            ))
-        }
-
+           technologies.map((tech) => (
+            <div class="inline-block m-0">
+                <TechnologyCards
+                    text={tech.text}
+                    logo={tech.logo}
+                />
+            </div>
+           ))
+         }
     </div>
 </div>
+ 
+ <style>
+    .tech-card
+    {
+        background-image: linear-gradient(to bottom, rgba(255, 255,255, 0.05),
+        rgba(255, 255, 255, 0.033));
+        padding-block: 2rem;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-color: #ffffff26;
+        animation: 45s slide infinite linear;
+ }  
+
+ @keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-60%);
+    }
+}
+ </style>
