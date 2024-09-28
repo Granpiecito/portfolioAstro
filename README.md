@@ -4,14 +4,14 @@ Change logs
 # Astro Portfolio\
 
 Change logs
-~
+```
 - [Version 1.0.0] - Initial release
 - [Version 1.1.0] - Added new features
 - [Version 1.2.0] - Bug fixes and performance improvements
 - [Version 1.3.0] - Changed font Player Start 2 to Signika Negative
 - [Version 1.4.0] - Added new things in about section, botton home linked to index.astro
 - [Version 1.5.0] - Added Carousel for the technologies, and a animation, end of carousel bug
-~
+```
 
 # Introduction
 
