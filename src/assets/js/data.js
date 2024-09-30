@@ -24,7 +24,7 @@ export const technologies = [
     },
     {
         text: 'Php',
-        logo: '../src/img/Technologies/LanguagesP/php_dark.svg',
+        logo: '../src/img/Technologies/LanguagesP/Php_dark.svg',
     },
     {
         text: 'Flutter',

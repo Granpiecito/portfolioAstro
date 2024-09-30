@@ -9,13 +9,13 @@ const { text, logo } = Astro.props;
 const isSvg = logo.endsWith('.svg'); // Detecta si es un archivo SVG
 ---
 
-<div class="flex items-center mr-16">
+<div class="flex items-center mr-16 gap-x-2">
   {isSvg ? (
     <img src={logo} alt={text} class="w-[60px] h-[60px] p-1 border-gray-100/10 border-2 
-    bg-clip-text text-transparent bg-gradient-to-t from-gray-500 via-white/200 to-white/90 rounded-lg" />
+    bg-clip-text text-transparent bg-gradient-to-t from-gray-500 via-white/70 to-white/90 rounded-lg" />
   ) : (
     <i class={`${logo} text-[60px] p-1 border-gray-100/10 border-2 
-    bg-clip-text text-transparent bg-gradient-to-t from-gray-500 via-white/200 to-white/90 rounded-lg`}>
+    bg-clip-text text-transparent bg-gradient-to-t from-gray-500 via-white/70 to-white/90 rounded-lg`}>
     </i>
   )}
   <span class="text-2xl ml-6 font-bold bg-clip-text text-transparent
