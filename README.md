@@ -31,30 +31,54 @@ cd astro-portfolio
 
 Inside of this Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│   │    └── index.astro
-|   └── components/
-|   |     └── About.astro
-|   |     └── Navbar.astro
-|   |     └── ProfilePicture.astro
-|   |     └── Separator.astro
-|   └── assets/
-|   |       └── js
-|   |           └── data.js
-|   |           └── typewritter.js
-|   |       └── styles.css
-|   └── img/
-|   |       └── profileimg.avif
-|   |       └── retrato-3d-personas.png
-|   └── layouts/
-|          └── Layout.astro
-└── tailwind.config.js
-├── astro.config.mjs
-└── package.json
+```
+portfolioAstro
+├─ README.md
+├─ src
+│  ├─ assets
+│  │  ├─ js
+│  │  │  ├─ data.js
+│  │  │  └─ typewritter.js
+│  │  └─ style.css
+│  ├─ components
+│  │  ├─ About.astro
+│  │  ├─ Navbar.astro
+│  │  ├─ ProfilePicture.astro
+│  │  ├─ Separator.astro
+│  │  ├─ Technologies.astro
+│  │  └─ TechnologyCards.astro
+│  ├─ env.d.ts
+│  ├─ img
+│  │  ├─ profileimg.avif
+│  │  ├─ retrato-3d-personas.png
+│  │  └─ Technologies
+│  │     ├─ Data Base
+│  │     │  ├─ mysql.svg
+│  │     │  ├─ postgresql.svg
+│  │     │  └─ sql-server.svg
+│  │     ├─ Frameworks
+│  │     │  ├─ Astro_dark.svg
+│  │     │  ├─ boostrap.svg
+│  │     │  ├─ laravel.svg
+│  │     │  ├─ spring.svg
+│  │     │  ├─ svelte.svg
+│  │     │  └─ tailwindcss.svg
+│  │     └─ LanguagesP
+│  │        ├─ csharp.svg
+│  │        ├─ css.svg
+│  │        ├─ dart.svg
+│  │        ├─ flutter.svg
+│  │        ├─ html5.svg
+│  │        ├─ java.svg
+│  │        ├─ Php_dark.svg
+│  │        └─ typescript.svg
+│  ├─ layouts
+│  │  └─ Layout.astro
+│  └─ pages
+│     └─ index.astro
+├─ tailwind.config.mjs
+└─ tsconfig.json
+
 ```
 
 
