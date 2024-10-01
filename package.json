@@ -1,10 +1,10 @@
 {
   "name": "portfolioastro",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.6.0",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "dev": "Jean dev",
+    "start": "Mila dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"

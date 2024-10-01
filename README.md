@@ -1,4 +1,3 @@
-# Astro Portfolio\
 
 Change logs
 # Astro Portfolio\
@@ -11,6 +10,7 @@ Change logs
 - [Version 1.3.0] - Changed font Player Start 2 to Signika Negative
 - [Version 1.4.0] - Added new things in about section, botton home linked to index.astro
 - [Version 1.5.0] - Added Carousel for the technologies, and a animation, end of carousel bug
+- [Version 1.6.0] - Technologies Finish, fixed carousel bug
 ```
 
 # Introduction
@@ -33,17 +33,22 @@ Inside of this Astro project, you'll see the following folders and files:
 
 ```
 portfolioAstro
+├─ package.json
+├─ public
+│  └─ favicon.svg
 ├─ README.md
 ├─ src
 │  ├─ assets
 │  │  ├─ js
 │  │  │  ├─ data.js
+│  │  │  ├─ index.js
 │  │  │  └─ typewritter.js
 │  │  └─ style.css
 │  ├─ components
 │  │  ├─ About.astro
 │  │  ├─ Navbar.astro
 │  │  ├─ ProfilePicture.astro
+│  │  ├─ projects.astro
 │  │  ├─ Separator.astro
 │  │  ├─ Technologies.astro
 │  │  └─ TechnologyCards.astro
@@ -89,3 +94,4 @@ All commands are run from the root of the project, from a terminal:
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
+

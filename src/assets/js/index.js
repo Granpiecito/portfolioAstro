@@ -1,6 +1,6 @@
 document.addEventListener('astro:page-load', () => {
     /*Tech Card Slider*/
-    const wrapper = document.querySelector('[data-tech-wrapper]');
+   const wrapper = document.querySelector('[data-tech-wrapper]');
    let copy =  document.querySelector('.tech-card')?.cloneNode(true);
    wrapper.append(copy);
    

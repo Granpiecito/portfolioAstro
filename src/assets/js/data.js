@@ -54,9 +54,9 @@ export const technologies = [
         text: 'Postgresql',
         logo: '../src/img/Technologies/Data Base/postgresql.svg',
     },
-    {
+    /*{
         text: 'Sql Server',
         logo:'../src/img/Technologies/Data Base/sql-server.svg',
-    },
+    },*/
 
 ];
