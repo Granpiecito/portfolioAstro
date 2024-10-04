@@ -3,8 +3,8 @@
   "type": "module",
   "version": "1.6.0",
   "scripts": {
-    "dev": "Jean dev",
-    "start": "Mila dev",
+    "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
