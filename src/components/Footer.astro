@@ -4,26 +4,28 @@
 import {socials, info} from '../assets/js/data';
 ---
 <footer>
-    <div class="flex justify-center md:justify-center xs:justify-center">
-    <ul class="justify-center flex flex-wrap xl:basis-[20%] md:basis-[28%] md:grid xs:hidden md:justify-center"
-        style={{gridTemplateColumns:`repeat(${socials.length}, minmax(0, 1fr))` }}
+    <div class="flex justify-center md:justify-center sm:justify-center">
+        <ul class="justify-center flex flex-wrap xl:basis-[20%] md:basis-[28%] md:grid sm:hidden md:justify-center"
+            style="grid-template-columns: repeat({socials.length}, minmax(0, 1fr));"
         >
-            {
-            socials.map((social) => (
+            {socials.map((social) => (
                 <li>
                     <a 
-                    href="#"
-                    class="text-2xl opacity-50 hover:opacity-100 duration-300 ease-in cursor-pointer">
-                    <i class = {social.logo}/>
+                        href={social.logo}
+                        class="text-2xl opacity-50 hover:opacity-100 duration-300 ease-in cursor-pointer"
+                    >
+                        <i class={social.logo}></i>
                     </a>
-                    </li>
-            ))
-            }
+                </li>
+            ))}
         </ul> 
     </div>
-    <div class="flex justify-center md:justify-center xs:justify-center">
-        <small class="text-center text-xs">&copy; {year} Portfolio-Astro by<a class="footer__link" href="https://github.com/Granpiecito"> JeanDev</a>. All Rights Reserved.</small>
-        <div>
-   
+    <div class="flex justify-center md:justify-center sm:justify-center">
+        <small class="text-center text-xs">
+            &copy; {year} Portfolio-Astro by
+            <a class="footer__link" href="https://github.com/Granpiecito"> JeanDev</a>.
+            All Rights Reserved.
+        </small>
+    </div>
 </footer>
 
