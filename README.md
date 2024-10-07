@@ -13,6 +13,7 @@ Change logs
 - [Version 0.0.6] - Technologies Finish, fixed carousel bug
 - [Version 0.0.7] - Added footer section
 - [Version 0.0.8] - Fixed footer section in mobile view
+- [Version 0.0.9] - Fixed footer view in mobile and desktop 
 ```
 
 # Introduction
