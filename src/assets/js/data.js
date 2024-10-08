@@ -1,12 +1,15 @@
 export const socials = [
     {
-        logo: 'bx bxl-linkedin'
+        logo: 'bx bxl-linkedin',
+        url : '',
     },
     {
-        logo: 'bx bxl-github'
+        logo: 'bx bxl-github',
+        url : 'https://github.com/Granpiecito',
     },
     {
-        logo: 'bx bxl-instagram'
+        logo: 'bx bxs-envelope',
+        url: ''
     }
 
 ];
