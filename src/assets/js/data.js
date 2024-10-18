@@ -1,7 +1,7 @@
 export const socials = [
     {
         logo: 'bx bxl-linkedin',
-        url : '',
+        url : 'https://www.linkedin.com/in/leroy-perryman-aleman-4925b2234',
     },
     {
         logo: 'bx bxl-github',
@@ -54,12 +54,8 @@ export const technologies = [
         logo: '../src/img/Technologies/Data Base/mysql.svg',
     },
     {
-        text: 'Postgresql',
-        logo: '../src/img/Technologies/Data Base/postgresql.svg',
-    },
-    /*{
         text: 'Sql Server',
         logo:'../src/img/Technologies/Data Base/sql-server.svg',
-    },*/
+    }
 
 ];

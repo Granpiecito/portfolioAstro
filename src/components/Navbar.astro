@@ -18,7 +18,8 @@ style={ {gridTemplateColumns:`repeat(${info.length + 1 }, minmax(0, 1fr))` }}
              info.map((i)=>(
                 <li>
                     <a class="opacity-70 hover:opacity-100 duration-300 text-[17px] font-semibold"
-                    href={`#${i.text.toLowerCase()}`}>{i.text}</a>
+                    href={`#${i.text.toLowerCase()}`}>{i.text}
+                    </a>
                 </li>
             ))
         }

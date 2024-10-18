@@ -15,6 +15,7 @@ Change logs
 - [Version 0.0.8] - Fixed footer section in mobile view
 - [Version 0.0.9] - Fixed footer view in mobile and desktop 
 - [Version 0.1.0] - Changes in footer and layout
+- [Version 0.1.1] -Modify about content, added badged in the profile text
 ```
 
 # Introduction
