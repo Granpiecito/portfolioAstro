@@ -13,8 +13,9 @@ export default {
 			//2xl: '1536px',
 			},
 			fontFamily: {
-				'signika-negative': ['"Signika Negative"', 'normal'],
+				'Oswald': ['"Oswald"', 'normal'],
 			  }
+			  
 		},
 	},
 	plugins: [],
