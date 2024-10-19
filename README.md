@@ -19,6 +19,7 @@ Change logs
 - [Version 0.1.2] - Added interesting section in the index page, need to fix the text in interesting
 - [Version 0.1.3] - Remove underline in the text feedback from Luis Matus
 - [Version 0.1.4] - Changes in About and Interesting sections.
+- [Version 0.1.5] - Added new files, ProjctsMarkdown, slug.astro and Projects.astro.
 ```
 
 # Introduction
@@ -64,6 +65,7 @@ portfolioAstro
 │  │  └─ style.css
 │  ├─ components
 │  │  ├─ About.astro
+│     └─ Interesting.astro
 │  │  ├─ Navbar.astro
 │  │  ├─ ProfilePicture.astro
 │  │  ├─ projects.astro
@@ -75,6 +77,9 @@ portfolioAstro
 │  │  └─ Layout.astro
 │  └─ pages
 │     └─ index.astro
+│     └─ projects
+│        ├─ [...slug].astro
+│     └─ projects.astro
 ├─ tailwind.config.mjs
 └─ tsconfig.json
 

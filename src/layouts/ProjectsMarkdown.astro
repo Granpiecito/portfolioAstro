@@ -1,0 +1,17 @@
+---
+import BaseLayout from "./Layout.astro";
+const {frontmatter} = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+    <div>
+    </div>
+    <h2>{frontmatter.title}</h2>
+    <ul class="badge_list">
+        <li><span class="badge badge--item">TYPE</span>{frontmatter.type}</li>
+        <li><span class="badge badge--item">LANGUAGE</span>{frontmatter.language}</li>
+    </ul>
+    <slot />
+</BaseLayout>
+
+---
