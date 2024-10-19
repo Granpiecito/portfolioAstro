@@ -17,6 +17,7 @@ Change logs
 - [Version 0.1.0] - Changes in footer and layout
 - [Version 0.1.1] - Modify about content, added badged in the profile text
 - [Version 0.1.2] - Added interesting section in the index page, need to fix the text in interesting
+- [Version 0.1.3] - Remove underline in the text feedback from Luis Matus
 ```
 
 # Introduction
