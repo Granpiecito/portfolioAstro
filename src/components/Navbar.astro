@@ -7,11 +7,11 @@ import { socials, info } from '../assets/js/data';
 <nav class="w-full h-16 bg-black text-white flex items-center px-4 py-3 fixed top-0 z-50 md:justify-center
  xs:justify-center">
 <ul class="grid justify-items-center gap-x-3 xl:basis-[20%] md:basis-[28%] sm:basis[40%] xs:basis[75%]"
-style={ {gridTemplateColumns:`repeat(${info.length + 1 }, minmax(0, 1fr))` }}
+style={ {gridTemplateColumns:`repeat(${info.length + 2 }, minmax(0, 1fr))` }}
 >
         <li>
             <a class="opacity-70 hover:opacity-100 duration-300 text-[17px] font-semibold"
-            href="#Home">Home</a>
+            href="/#Home">Home</a>
         </li>
         {
             pathname === '/' &&
@@ -23,5 +23,9 @@ style={ {gridTemplateColumns:`repeat(${info.length + 1 }, minmax(0, 1fr))` }}
                 </li>
             ))
         }
+        <li>
+            <a class="opacity-70 hover:opacity-100 duration-300 text-[17px] font-semibold"
+            href="./Projects">Projects</a>
+        </li>
     </ul>
 </nav>

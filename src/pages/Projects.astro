@@ -1,6 +1,18 @@
 ---
-import BaseLayout from "../layouts/Layout.astro";
-const {frontmatter} = Astro.props;
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Card from "../components/Cards.astro";
+import { getCollection } from "astro:content";
+
+const allprojects = await getCollection("projects");
 ---
-<BaseLayout title={frontmatter.title}>
-</BaseLayout>
+
+<Layout title="JeanDev | Projects">
+    <Navbar />
+
+    <div class="h-min-screen w-full object-cover">   
+        <img src="../src/img/Jean_dev_logo.svg" alt="rt">
+    </div>
+    <h2>Projects</h2>
+
+</Layout>

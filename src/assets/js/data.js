@@ -15,8 +15,7 @@ export const socials = [
 ];
 
 export const info = [
-    {text:'About', },
-    {text:'Projects', }
+    {text:'About', }
 ];
 
 export const technologies = [
