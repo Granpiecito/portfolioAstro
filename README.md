@@ -25,7 +25,7 @@ Change logs
 
 # Introduction
 
-I create this project for the propurse to lear Astro and Tailwind CSS.
+I create this project for the purpose to learn more about Astro and Tailwind CSS.
 
 
 ## 🏗️ How to get started?
