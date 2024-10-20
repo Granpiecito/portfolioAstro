@@ -66,7 +66,8 @@ portfolioAstro
 │  │  └─ style.css
 │  ├─ components
 │  │  ├─ About.astro
-│     └─ Interesting.astro
+│  │  └─ Interesting.astro
+│  │  └─ Cards.astro
 │  │  ├─ Navbar.astro
 │  │  ├─ ProfilePicture.astro
 │  │  ├─ projects.astro
@@ -79,7 +80,7 @@ portfolioAstro
 │  └─ pages
 │     └─ index.astro
 │     └─ projects
-│        ├─ [...slug].astro
+│     |   └─ [...slug].astro
 │     └─ projects.astro
 ├─ tailwind.config.mjs
 └─ tsconfig.json
