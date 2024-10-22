@@ -21,6 +21,7 @@ Change logs
 - [Version 0.1.4] - Changes in About and Interesting sections.
 - [Version 0.1.5] - Added new files, ProjctsMarkdown, slug.astro and Projects.astro, need to fix routing.
 - [Version 0.1.6] - Routing to projects page fixed, home button fixed in project page.
+- [Version 0.1.7] - config.ts data restructure, need to fix the project collection call in projects.astro
 ```
 
 # Introduction
@@ -42,6 +43,8 @@ You need install Node Js to run the project, read the documentation for know how
 https://nodejs.org/en/learn/getting-started/how-to-install-nodejs
 
 After install Node Js, you can run the project
+
+npm install
 
 npm run dev
 
@@ -94,6 +97,6 @@ All commands are run from the root of the project, from a terminal:
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `git clone`               | Clone the project from the git hub repository    |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm install`             | Install the dependencies                         |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 

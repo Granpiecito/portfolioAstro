@@ -1,17 +1,21 @@
 ---
-import BaseLayout from "./Layout.astro";
-const {frontmatter} = Astro.props;
+import BaseLayout from './Layout.astro';
+const { frontmatter } = Astro.props;
 ---
-
 <BaseLayout title={frontmatter.title}>
-    <div>
+    <div class="gif">
+        <img width="300" height="259" alt="RaccoonLaptopGif" src="/laptop.webp"/>
     </div>
     <h2>{frontmatter.title}</h2>
-    <ul class="badge_list">
-        <li><span class="badge badge--item">TYPE</span>{frontmatter.type}</li>
-        <li><span class="badge badge--item">LANGUAGE</span>{frontmatter.language}</li>
-    </ul>
     <slot />
+    <ul class="badge__list">
+        <li><span class="badge badge--item">PLATFORM</span>{frontmatter.platform}</li>
+        <li><span class="badge badge--item">STACK</span>{frontmatter.stack}</li>
+        <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
+        <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
+    </ul>
+    <div class="center">
+        <img class="pro-img" width="500px" height="281" src={frontmatter.ProjectImg1.url} alt={frontmatter.ProjectImg1.alt} />
+        <img class="pro-img" width="500px" height="281" src={frontmatter.ProjectImg2.url} alt={frontmatter.ProjectImg2.alt} />
+    </div>
 </BaseLayout>
-
----

@@ -14,10 +14,6 @@ export const socials = [
 
 ];
 
-export const info = [
-    {text:'About', }
-];
-
 export const technologies = [
     
     {

@@ -1,18 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Card from "../components/Cards.astro";
+import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 
-const allprojects = await getCollection("projects");
+const allprojects = await getCollection('projects');
 ---
 
 <Layout title="JeanDev | Projects">
-    <Navbar />
-
-    <div class="h-min-screen w-full object-cover">   
-        <img src="../src/img/Jean_dev_logo.svg" alt="rt">
-    </div>
+<div>
+    <h2>Aa
+        <p>
+            
+        </p>
+    </h2>
+</div>
     <h2>Projects</h2>
+    <ul role="list" class="link-card-grid">
+        {allprojects.map((card: { slug: any; data: { image: { url: string; }; title: string; description: string; }; }) => <Card 
+            url={`/projects/${card.slug}/`} 
+            image={card.data.image.url} 
+            title={card.data.title} 
+            body={card.data.description}
+        />)}
+    </ul>
 
 </Layout>
