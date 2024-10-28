@@ -1,8 +1,8 @@
 ---
-title: "Project 1"
-description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
+title: "SIME"
+description: "Sistema de control y monitero estadistico"
 image:
-  url: "./"
+  url: "./github.svg"
   alt: "GitHub wallpaper"
 worksImage1:
   url: ""
@@ -11,9 +11,9 @@ worksImage2:
   url: ""
   alt: "Second image of your project"
 platform: "Web"
-stack: "Astro, JavaScript"
-website: "https://astro-milky-way.netlify.app/"
-github: "https://github.com/ttomczak3/Milky-Way"
+stack: "Php, Laravel, Mysql, Javascript"
+website: ""
+github: ""
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie.

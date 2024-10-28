@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
+import Footer from "../components/Footer.astro";
 
 const allprojects = await getCollection("projects");
 ---
@@ -28,3 +29,4 @@ const allprojects = await getCollection("projects");
     }
 </style>
 </Layout>
+<Footer/>
