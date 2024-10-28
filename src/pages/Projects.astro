@@ -3,25 +3,28 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 
-const allprojects = await getCollection('projects');
+const allprojects = await getCollection("projects");
 ---
 
 <Layout title="JeanDev | Projects">
 <div>
-    <h2>Aa
-        <p>
-            
-        </p>
-    </h2>
-</div>
-    <h2>Projects</h2>
+
     <ul role="list" class="link-card-grid">
+        <li>
         {allprojects.map((card: { slug: any; data: { image: { url: string; }; title: string; description: string; }; }) => <Card 
             url={`/projects/${card.slug}/`} 
             image={card.data.image.url} 
             title={card.data.title} 
             body={card.data.description}
         />)}
+        </li>
     </ul>
-
+</div>
+<style>
+    div{
+        display: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+</style>
 </Layout>

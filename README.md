@@ -22,6 +22,7 @@ Change logs
 - [Version 0.1.5] - Added new files, ProjctsMarkdown, slug.astro and Projects.astro, need to fix routing.
 - [Version 0.1.6] - Routing to projects page fixed, home button fixed in project page.
 - [Version 0.1.7] - config.ts data restructure, need to fix the project collection call in projects.astro
+- [Version 0.1.8] - Fixed project collection call
 ```
 
 # Introduction
