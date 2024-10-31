@@ -8,12 +8,12 @@ const allprojects = await getCollection("projects");
 ---
 
 <Layout title="JeanDev | Projects">
-<div>
-
-    <ul role="list" class="link-card-grid">
-        <li>
+<div class=" grid grid-cols-1 gap-4 mt-16 scroll-m-36">
+    <ul role="list" class="grid gap-0 text-center sm:grid-cols-0 md:grid-cols-2 lg:grid-cols-3 justify-items-center
+    ">
+        <li  class="w-full mx-full-xs">
         {allprojects.map((card: { slug: any; data: { image: { url: string; }; title: string; description: string; }; }) => <Card 
-            url={`/projects/${card.slug}/`} 
+            url={`/projects/${card.slug}/`}  
             image={card.data.image.url} 
             title={card.data.title} 
             body={card.data.description}
@@ -21,12 +21,7 @@ const allprojects = await getCollection("projects");
         </li>
     </ul>
 </div>
-<style>
-    div{
-        display: center;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-</style>
+
 </Layout>
 <Footer/>
+

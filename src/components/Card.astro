@@ -9,11 +9,11 @@ interface Props {
 const { url, image, title, body } = Astro.props as Props;
 ---
 
-<li class="card">
+<li class="center grid grid-cols-1">
     <a class="card_link" href={url}>
-        <div class="columns-auto " >
+        <div class="card_img_container" >
             <img 
-                class="card_image content-center: justify-center"
+                class="card_image"
                 width="220"
                 height="110"
                 src={image} 
