@@ -1,4 +1,5 @@
 
+
 Change logs
 # Astro Portfolio\
 
@@ -60,9 +61,12 @@ Inside of this Astro project, you'll see the following folders and files:
 
 ```
 portfolioAstro
+├─ astro.config.mjs
+├─ package-lock.json
 ├─ package.json
 ├─ public
-│  └─ favicon.svg
+│  ├─ favicon.svg
+│  └─ github.svg
 ├─ README.md
 ├─ src
 │  ├─ assets
@@ -73,22 +77,56 @@ portfolioAstro
 │  │  └─ style.css
 │  ├─ components
 │  │  ├─ About.astro
-│  │  └─ Interesting.astro
-│  │  └─ Cards.astro
+│  │  ├─ Card.astro
+│  │  ├─ Footer.astro
+│  │  ├─ Interesting.astro
 │  │  ├─ Navbar.astro
 │  │  ├─ ProfilePicture.astro
-│  │  ├─ projects.astro
 │  │  ├─ Separator.astro
 │  │  ├─ Technologies.astro
 │  │  └─ TechnologyCards.astro
-|  |  ├─ Footer.astro
+│  ├─ content
+│  │  ├─ config.ts
+│  │  └─ projects
+│  │     ├─ Nica Places copy.md
+│  │     ├─ Nica Places.md
+│  │     ├─ SIME copy.md
+│  │     └─ SIME.md
+│  ├─ env.d.ts
+│  ├─ img
+│  │  ├─ Jeandevletras.svg
+│  │  ├─ Jean_dev_logo.svg
+│  │  ├─ profileimg.avif
+│  │  ├─ retrato-3d-personas.png
+│  │  └─ Technologies
+│  │     ├─ Data Base
+│  │     │  ├─ mysql.svg
+│  │     │  ├─ postgresql.svg
+│  │     │  └─ sql-server.svg
+│  │     ├─ Frameworks
+│  │     │  ├─ Astro_dark.svg
+│  │     │  ├─ boostrap.svg
+│  │     │  ├─ laravel.svg
+│  │     │  ├─ spring.svg
+│  │     │  ├─ svelte.svg
+│  │     │  └─ tailwindcss.svg
+│  │     └─ LanguagesP
+│  │        ├─ csharp.svg
+│  │        ├─ css.svg
+│  │        ├─ dart.svg
+│  │        ├─ flutter.svg
+│  │        ├─ html5.svg
+│  │        ├─ java.svg
+│  │        ├─ Php_dark.svg
+│  │        └─ typescript.svg
 │  ├─ layouts
-│  │  └─ Layout.astro
+│  │  ├─ Layout.astro
+│  │  └─ ProjectsMarkdown.astro
 │  └─ pages
-│     └─ index.astro
-│     └─ projects
-│     |   └─ [...slug].astro
-│     └─ projects.astro
+│     ├─ index.astro
+│     ├─ projects
+│     │  └─ [...slug].astro
+│     └─ Projects.astro
 ├─ tailwind.config.mjs
 └─ tsconfig.json
 
@@ -103,4 +141,3 @@ All commands are run from the root of the project, from a terminal:
 | `git clone`               | Clone the project from the git hub repository    |
 | `npm install`             | Install the dependencies                         |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-
