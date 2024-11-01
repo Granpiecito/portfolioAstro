@@ -25,6 +25,7 @@ Change logs
 - [Version 0.1.8] - Fixed project collection call
 - [Version 0.1.9] - Modify projects.md content and card astro 
 - [Version 0.2.0] - Modify cards view in project section, need to fix the grid columns.
+- [Version 0.2.1] - Delete description in card view, fixed grid columns in project page
 ```
 
 # Introduction

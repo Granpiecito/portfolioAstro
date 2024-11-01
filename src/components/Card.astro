@@ -9,9 +9,9 @@ interface Props {
 const { url, image, title, body } = Astro.props as Props;
 ---
 
-<li class="center grid grid-cols-1">
+<li class="flex grid-cols-1 justify-between: text-center">
     <a class="card_link" href={url}>
-        <div class="card_img_container" >
+        <div class="card_img_container flex justify-center: aling-between">
             <img 
                 class="card_image"
                 width="220"
@@ -23,8 +23,5 @@ const { url, image, title, body } = Astro.props as Props;
         <h3 class="card_title">
             {title}
         </h3>
-        <p class="card_txt">
-            {body}
-        </p>
     </a>
 </li>
