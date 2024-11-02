@@ -3,19 +3,22 @@ import BaseLayout from './Layout.astro';
 import Footer from '../components/Footer.astro';
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout title={frontmatter.title}>
-    <div class="pro-card ">
+<BaseLayout title=`Projects | ${frontmatter.title}`>
+    <div class="pro-card flex flex-wrap justify-center mt-16 scroll-m-36 sm:flex-col:items-center:justify-center:text-center">
         <div class="center">
             <img width="300" height="259" alt="githubpj" src="/github.svg"/>
         </div>
-        <h2>{frontmatter.title}</h2>
-        <slot />
-        <ul class="badge__list">
-            <li><span class="badge badge--item">PLATFORM</span>{frontmatter.platform}</li>
-            <li><span class="badge badge--item">STACK</span>{frontmatter.stack}</li>
-            <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
-            <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
-        </ul>
+        <h2 class=" flex flex-wrap items-center:justify-between font-bold text-2xl">{frontmatter.title}</h2>
+        <div class="grid :grid-cols-1 gap-6 md:mt-16 ms-5 justify-center items-center">
+            <slot/>
+        </div>
+            <ul>
+                <li><span class="badge badge--item">PLATFORM</span>{frontmatter.platform}</li>
+                <li><span class="badge badge--item">STACK</span>{frontmatter.stack}</li>
+                <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
+                <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
+            </ul>
+        
         <div class="center">
             <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
             <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage2.url} alt={frontmatter.worksImage2.alt} />

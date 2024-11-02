@@ -12,8 +12,8 @@ worksImage2:
     alt: 'second image of your project.'
 platform: Mobile
 stack: Flutter, Dart
-website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
+website: https://github.com/github.com
+github: https://github.com/github.com
 ---
 
 App made in flutter for the contest Hackathon IA 2023, in the category Start-up

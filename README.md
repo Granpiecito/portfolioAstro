@@ -28,6 +28,7 @@ Change logs
 - [Version 0.2.0] - Modify cards view in project section, need to fix the grid columns.
 - [Version 0.2.1] - Delete description in card view, fixed grid columns in project page
 - [Version 0.2.2] - Fixed footer section, modify mt value in projects.astro
+- [Version 0.2.3] - Modify navbar gridcolumns style, added project view responsive, need to fix markdownlayout view
 ```
 
 # Introduction
