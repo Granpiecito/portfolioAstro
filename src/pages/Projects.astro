@@ -2,13 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
-import Footer from "../components/Footer.astro";
+
 
 const allprojects = await getCollection("projects");
 ---
 
 <Layout title="JeanDev | Projects">
-<div class="flex justify-center ">
+<div class="flex justify-center mt-5 grid-cols-1 ">
     <ul role="list" class="grid gap-4 mt-16 scroll-m-36 sm:grid-cols-1 md:grid-cols-2 ">
     {allprojects.map((card: { slug: any; data: { image: { url: string; }; title: string; description: string; }; }) => <Card 
     url={`/projects/${card.slug}/`}  
@@ -18,7 +18,6 @@ const allprojects = await getCollection("projects");
 />)}
     </ul>
 </div>
-
 </Layout>
-<Footer/>
+
 
