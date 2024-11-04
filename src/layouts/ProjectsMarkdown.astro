@@ -4,22 +4,21 @@ import Footer from '../components/Footer.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout title=`Projects | ${frontmatter.title}`>
-    <div class="pro-card flex flex-wrap justify-center mt-16 scroll-m-36 sm:flex-col:items-center:justify-center:text-center">
-        <div class="center">
+    <div class="grid flex-cols gap-4 mt-16 scrollbar-m-36 md:justify-items-center sm:justify-items-center">
+        <div class="grid flex-cols gap-4 justify-items-center">
             <img width="300" height="259" alt="githubpj" src="/github.svg"/>
         </div>
-        <h2 class=" flex flex-wrap items-center:justify-between font-bold text-2xl">{frontmatter.title}</h2>
-        <div class="grid :grid-cols-1 gap-6 md:mt-16 ms-5 justify-center items-center">
+        <h2 class=" grid px-20 justify-items-center font-bold text-2xl sm:justify-items-center">{frontmatter.title}</h2>
+        <a class="grid px-20 justify-items-between text-xl font-semibold">
             <slot/>
-        </div>
-            <ul>
-                <li><span class="badge badge--item">PLATFORM</span>{frontmatter.platform}</li>
-                <li><span class="badge badge--item">STACK</span>{frontmatter.stack}</li>
-                <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
-                <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
-            </ul>
-        
-        <div class="center">
+        </a>
+        <ul class="grid flex-rows justify-center">
+            <li><span class="badge badge--item">PLATFORM</span> {frontmatter.platform}</li>
+            <li><span class="badge badge--item">STACK</span> {frontmatter.stack}</li>
+            <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank"> {frontmatter.website}</a></li>
+            <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank"> {frontmatter.github}</a></li>
+        </ul>
+        <div class="grid grid-col-1 gap-4 mt-16 scrollbar-m-36 md:justify-items-between sm:justify-items-center">
             <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
             <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage2.url} alt={frontmatter.worksImage2.alt} />
         </div>
