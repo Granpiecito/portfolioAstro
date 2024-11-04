@@ -95,7 +95,6 @@ portfolioAstro
 │  │     ├─ Nica Places.md
 │  │     ├─ SIME copy.md
 │  │     └─ SIME.md
-│  ├─ env.d.ts
 │  ├─ img
 │  │  ├─ Jeandevletras.svg
 │  │  ├─ Jean_dev_logo.svg
@@ -130,8 +129,6 @@ portfolioAstro
 │     ├─ projects
 │     │  └─ [...slug].astro
 │     └─ Projects.astro
-├─ tailwind.config.mjs
-└─ tsconfig.json
 
 ```
 
