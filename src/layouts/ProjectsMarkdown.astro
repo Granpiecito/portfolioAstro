@@ -12,13 +12,13 @@ const { frontmatter } = Astro.props;
         <a class="grid px-20 justify-items-between text-xl font-semibold">
             <slot/>
         </a>
-        <ul class="grid flex-rows justify-center">
+        <ul class="grid flex-rows">
             <li><span class="badge badge--item">PLATFORM</span> {frontmatter.platform}</li>
             <li><span class="badge badge--item">STACK</span> {frontmatter.stack}</li>
             <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank"> {frontmatter.website}</a></li>
             <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank"> {frontmatter.github}</a></li>
         </ul>
-        <div class="grid grid-col-1 gap-4 mt-16 scrollbar-m-36 md:justify-items-between sm:justify-items-center">
+        <div class="grid flex-cols gap-4 mt-16 md:justify-items-between sm:justify-items-center">
             <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
             <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage2.url} alt={frontmatter.worksImage2.alt} />
         </div>
