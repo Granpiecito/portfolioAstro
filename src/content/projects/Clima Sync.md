@@ -1,5 +1,5 @@
 ---
-title: "Weather App"
+title: "ClimaSync"
 description: "Sistema de control y monitero estadistico"
 image:
   url: "./github.svg"

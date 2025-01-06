@@ -30,6 +30,7 @@ Change logs
 - [Version 0.2.2] - Fixed footer section, modify mt value in projects.astro
 - [Version 0.2.3] - Modify navbar gridcolumns style, added project view responsive, need to fix markdownlayout 
 - [Version 0.2.4] - Fixed MarkdownLayout view
+- [Version 0.2.5] - Fixed footer social icons flex, added 2 more markdowns 
 ```
 
 # Introduction
