@@ -7,7 +7,7 @@ const { pathname } = Astro.url;
     data-astro-cid-4rde66u6=""
 >
     <div
-        class="grid items-center justify-center md:justify-normal w-full grid-cols-[auto_1fr] mx-auto text-white gap-x-10 md:flex max-w-screen-full"
+        class="grid items-center place-center md:justify-normal w-full grid-cols-[auto_0fr] mx-auto px-14 text-white gap-x-10 md:flex max-w-screen-full"
         data-astro-cid-4rde66u6=""
     >
         <div
@@ -17,8 +17,8 @@ const { pathname } = Astro.url;
             <a
                 href="/"
                 class="ml-4 flex items-center gap-2.5 font-bold transition-transform duration-300 hover:scale-110"
-                title="Ir a la página principal"
-                aria-label="Ir a la página principal"
+                title="Home Page"
+                aria-label="Home Page"
             >
                 /*un svg va aqui */
                 <span class="hidden lg:block text-3xl font-montserrat"
@@ -70,9 +70,7 @@ const { pathname } = Astro.url;
                 >
                 <a href="/Projects" class="flex items-center md:w-auto justify-center gap-2 md:px-4 md:py-2 hover:bg-brand-gray/5 md:rounded-2xl border border-transparent hover:border-brand-gray/10 transition-all min-h-[50px] md:text-base px-5 py-4 text-xl duration-300 w-full"
                 data-astro-cid-4rde66u6="">
-                        <span        
-                        >
-                            <svg
+                <svg
                                 width="24"
                                 height="24"
                                 viewBox="0 0 24 24"
@@ -120,6 +118,8 @@ const { pathname } = Astro.url;
                                     </clipPath>
                                 </defs>
                             </svg>
+                        <span        
+                        >
                             Projects
                         </span>
                     </a>

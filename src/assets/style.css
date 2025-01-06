@@ -77,6 +77,7 @@ p {
     animation-range: 0 150px;
 }
 
+/*Colors for the nav backdrops buttons*/
 .hover\:bg-brand-gray\/5:hover {
     background-color: #acb5c70d;
 }

@@ -32,6 +32,7 @@ Change logs
 - [Version 0.2.4] - Fixed MarkdownLayout view
 - [Version 0.2.5] - Fixed footer social icons flex, added 2 more markdowns 
 - [Version 0.2.6] - Changes in navbar, style css, main layout
+- [Version 0.2.7] - Changes in Style css for the hover in backdrop, added sticky rule in footer, deleted name in profile picture, deleted usless code from typewritter.js
 ```
 
 # Introduction
