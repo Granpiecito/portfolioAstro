@@ -67,5 +67,25 @@ p {
     unicode-bidi: isolate;
 }
 
+.header-animate[data-astro-cid-4rde66u6] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: reduce-header linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+}
 
-
+.hover\:bg-brand-gray\/5:hover {
+    background-color: #acb5c70d;
+}
+.hover\:border-brand-gray\/10:hover {
+    border-color: #acb5c71a;
+}
+.hover\:bg-brand-gray\/5:hover {
+    background-color: #acb5c70d;
+}
+.hover\:border-brand-gray\/10:hover {
+    border-color: #acb5c71a;
+}
