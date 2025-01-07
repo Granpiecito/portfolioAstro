@@ -1,3 +1,13 @@
+/*Body template theme*/
+.body-theme
+{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(48,48,48,1) 100%);
+}
+
+/*text colors*/
+h2,p,span,a,small{
+    color: white;
+}
 
 /*Tech Card Slider*/
 .tech-card
@@ -22,7 +32,7 @@
 /*Modal*/
 .tech-modal
 {
-    background-image: linear-gradient(to bottom, #000, hsla(0, 0%, 0%, 0.9));
+    background-image: linear-gradient(to bottom, #791e1e, hsla(0, 0%, 0%, 0.9));
     border: 2px solid #ffffff26;
     animation: fade-in 0.5s forwards;
 }

@@ -33,6 +33,7 @@ Change logs
 - [Version 0.2.5] - Fixed footer social icons flex, added 2 more markdowns 
 - [Version 0.2.6] - Changes in navbar, style css, main layout
 - [Version 0.2.7] - Changes in Style css for the hover in backdrop, added sticky rule in footer, deleted name in profile picture, deleted usless code from typewritter.js
+- [Version 0.2.8] - Added text colors in css, fixed navbar bug, change logo, new color for the template, changes composition in projects grid
 ```
 
 # Introduction
@@ -56,6 +57,8 @@ https://nodejs.org/en/learn/getting-started/how-to-install-nodejs
 After install Node Js, you can run the project
 
 npm install
+
+npm astro add tailwind 
 
 npm run dev
 
@@ -143,4 +146,5 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :----------------------------------------------- |
 | `git clone`               | Clone the project from the git hub repository    |
 | `npm install`             | Install the dependencies                         |
+| `npm astro add tailwind`  | Install Tailwind css dependencies                |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
