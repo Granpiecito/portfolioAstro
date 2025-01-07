@@ -70,8 +70,6 @@ Inside of this Astro project, you'll see the following folders and files:
 
 ```
 portfolioAstro
-├─ astro.config.mjs
-├─ package-lock.json
 ├─ package.json
 ├─ public
 │  ├─ favicon.svg
@@ -82,6 +80,7 @@ portfolioAstro
 │  │  ├─ js
 │  │  │  ├─ data.js
 │  │  │  ├─ index.js
+│  │  │  ├─ navbar.js
 │  │  │  └─ typewritter.js
 │  │  └─ style.css
 │  ├─ components
@@ -97,14 +96,20 @@ portfolioAstro
 │  ├─ content
 │  │  ├─ config.ts
 │  │  └─ projects
-│  │     ├─ Nica Places copy.md
+│  │     ├─ Clima Sync.md
 │  │     ├─ Nica Places.md
-│  │     ├─ SIME copy.md
-│  │     └─ SIME.md
+│  │     ├─ Portfolio.md
+│  │     ├─ SIME.md
+│  │     └─ Weather App.md
 │  ├─ img
+│  │  ├─ Jean-dev-logo1.png
 │  │  ├─ Jeandevletras.svg
 │  │  ├─ Jean_dev_logo.svg
 │  │  ├─ profileimg.avif
+│  │  ├─ Projects
+│  │  │  └─ Portfolio
+│  │  │     ├─ portfolio1.png
+│  │  │     └─ portfolio2.png
 │  │  ├─ retrato-3d-personas.png
 │  │  └─ Technologies
 │  │     ├─ Data Base
@@ -135,7 +140,8 @@ portfolioAstro
 │     ├─ projects
 │     │  └─ [...slug].astro
 │     └─ Projects.astro
-
+├─ tailwind.config.mjs
+└─ tsconfig.json
 ```
 
 ## 🧞 Commands
