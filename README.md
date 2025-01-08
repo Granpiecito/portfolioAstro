@@ -81,27 +81,45 @@ portfolioAstro
 │  │  ├─ js
 │  │  │  ├─ data.js
 │  │  │  ├─ index.js
-│  │  │  ├─ navbar.js
+│  │  │  ├─ scroll-effect.js
 │  │  │  └─ typewritter.js
 │  │  └─ style.css
 │  ├─ components
-│  │  ├─ About.astro
+│  │  ├─ About
+│  │  │  ├─ About.astro
+│  │  │  └─ es
 │  │  ├─ Card.astro
+│  │  ├─ Cards
+│  │  │  ├─ Container
+│  │  │  │  ├─ Cardscontainer.astro
+│  │  │  │  └─ es
+│  │  │  ├─ Info
+│  │  │  │  ├─ es
+│  │  │  │  └─ Info.astro
+│  │  │  ├─ Interesting
+│  │  │  │  ├─ es
+│  │  │  │  └─ Interesting.astro
+│  │  │  ├─ Projects
+│  │  │  │  └─ Card.astro
+│  │  │  └─ Technologies
+│  │  │     ├─ es
+│  │  │     └─ Technolgies.astro
 │  │  ├─ Footer.astro
-│  │  ├─ Interesting.astro
-│  │  ├─ Navbar.astro
+│  │  ├─ Navbar
+│  │  │  ├─ es
+│  │  │  └─ Navbar.astro
 │  │  ├─ ProfilePicture.astro
-│  │  ├─ Separator.astro
-│  │  ├─ Technologies.astro
-│  │  └─ TechnologyCards.astro
+│  │  └─ Separator.astro
 │  ├─ content
 │  │  ├─ config.ts
 │  │  └─ projects
 │  │     ├─ Clima Sync.md
+│  │     ├─ es
 │  │     ├─ Nica Places.md
 │  │     ├─ Portfolio.md
 │  │     ├─ SIME.md
 │  │     └─ Weather App.md
+│  ├─ env.d.ts
 │  ├─ img
 │  │  ├─ Jean-dev-logo1.png
 │  │  ├─ Jeandevletras.svg
@@ -134,9 +152,13 @@ portfolioAstro
 │  │        ├─ Php_dark.svg
 │  │        └─ typescript.svg
 │  ├─ layouts
+│  │  ├─ es
+│  │  │  └─ Layout.astro
 │  │  ├─ Layout.astro
 │  │  └─ ProjectsMarkdown.astro
 │  └─ pages
+│     ├─ es
+│     │  └─ index.astro
 │     ├─ index.astro
 │     ├─ projects
 │     │  └─ [...slug].astro
@@ -155,4 +177,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm install`             | Install the dependencies                         |
 | `npm astro add tailwind`  | Install Tailwind css dependencies                |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
+
+
 
