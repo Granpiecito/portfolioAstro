@@ -1,12 +1,21 @@
 /*Body template theme*/
 .body-theme
 {
-    background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(48,48,48,1) 100%);
+    background: linear-gradient(180deg, rgba(48,48,48,1) 50%, rgba(0,0,0,1) 100%);
 }
 
 /*text colors*/
 h2,p,span,a,small{
     color: white;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
 
 /*Tech Card Slider*/
@@ -68,14 +77,6 @@ h2,p,span,a,small{
     padding: 0.3em 0.6em 0.2em;
 }
 
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
 
 .header-animate[data-astro-cid-4rde66u6] {
     position: fixed;
