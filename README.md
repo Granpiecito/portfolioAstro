@@ -1,7 +1,7 @@
 
 
 Change logs
-# Astro Portfolio\
+# Astro Portfolio
 
 Change logs
 ```
@@ -34,6 +34,7 @@ Change logs
 - [Version 0.2.6] - Changes in navbar, style css, main layout
 - [Version 0.2.7] - Changes in Style css for the hover in backdrop, added sticky rule in footer, deleted name in profile picture, deleted usless code from typewritter.js
 - [Version 0.2.8] - Added text colors in css, fixed navbar bug, change logo, new color for the template, changes composition in projects grid
+- [Version 0.2.9]- Feature Re-desing Home view, added support for multilangue, restructure componets
 ```
 
 # Introduction
@@ -154,3 +155,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm install`             | Install the dependencies                         |
 | `npm astro add tailwind`  | Install Tailwind css dependencies                |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
+
