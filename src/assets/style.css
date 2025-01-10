@@ -1,4 +1,12 @@
 /*Body template theme*/
+html {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .body-theme
 {
     background: linear-gradient(180deg, rgba(48,48,48,1) 50%, rgba(0,0,0,1) 100%);
@@ -44,7 +52,7 @@ p {
     left: 0;
     right: 0;
     animation: reduce-header linear both;
-    animation-timeline: scroll();
+    animation-timeline: scroll;
     animation-range: 0 150px;
 }
 

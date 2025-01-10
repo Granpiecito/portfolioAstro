@@ -4,7 +4,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import "../assets/style.css";
@@ -39,7 +38,7 @@ import Navbar from "../components/Navbar/Navbar.astro";
         <ViewTransitions />
     </head>
     <body class="body-theme">
+        <script src="/src/assets/js/navbar-toggle.js" defer></script>
         <slot />
-        <script src="../assets/js/index.js"></script>
     </body><Footer />
 </html>

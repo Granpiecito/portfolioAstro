@@ -14,10 +14,9 @@ export function handleScrollEffect() {
     }
   };
 
-  // Agregar el listener
   window.addEventListener('scroll', onScroll);
 
-  // Retorna función para limpiar si es necesario (opcional)
+
   return () => {
     window.removeEventListener('scroll', onScroll);
   };

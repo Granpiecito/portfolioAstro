@@ -1,5 +1,5 @@
 ---
-lang: "en"
+lang: "es"
 title: 'Nica Places'
 description: 'App for traveling'
 image:

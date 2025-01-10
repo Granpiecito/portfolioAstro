@@ -1,4 +1,5 @@
 ---
+lang: "en"
 title: "ClimaSync"
 description: "Sistema de control y monitero estadistico"
 image:

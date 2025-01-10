@@ -1,6 +1,6 @@
 ---
-lang: "en"
-title: "Weather App"
+lang: "es"
+title: "ClimaSync"
 description: "Sistema de control y monitero estadistico"
 image:
   url: "./github.svg"

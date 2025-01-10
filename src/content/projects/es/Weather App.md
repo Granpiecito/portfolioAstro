@@ -1,5 +1,5 @@
 ---
-lang: "en"
+lang: "es"
 title: "Weather App"
 description: "Sistema de control y monitero estadistico"
 image:
