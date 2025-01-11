@@ -37,6 +37,7 @@ Change logs
 - [Version 0.2.9]- Feature Re-desing Home view, added support for multilangue, restructure componets
 - [Version 0.3.0] Feature Add multilingual support with English and Spanish localization, need to fix toggle button from navbar mobile view
 - [Version 0.3.1] Fixed Multilingual rendering error in projects view
+- [Version 0.3.2] Fixed movile footer not center, change the margin top for the projects view, translate about to spanish
 ```
 
 # Introduction

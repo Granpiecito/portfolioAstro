@@ -1,5 +1,5 @@
 ---
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const aboutURL = getRelativeLocaleUrl("es", "about");
 ---
@@ -16,8 +16,11 @@ const aboutURL = getRelativeLocaleUrl("es", "about");
     <div
         class="flex flex-col justify-center items-center gap-y-1text-center lg:w-[50%] lg:mx-auto md:mb-4 xs:w-[80%] xs:mb-6 xs:mx-auto"
     >
-        <h2 id="about-title" class="font-black text-center text-[50px] xs:text-6xl">
-            Hello I'm
+        <h2
+            id="about-title"
+            class="font-black text-center text-[50px] xs:text-6xl"
+        >
+            Hola soy
             <span
                 class="bg-clip-text text-transparent bg-gradient-to-r from-green-400
          from-30% via-sky-500 via-70% to-indigo-500 xl:inline xs:px-0"
@@ -25,21 +28,22 @@ const aboutURL = getRelativeLocaleUrl("es", "about");
                 Leroy Perryman
             </span>
         </h2>
-        <p class="opacity-80 text-[18px] text-justify  lg:mx-auto">
-            Developer with 1 year of experience in web development.
+        <p class="opacity-80 text-[18px] text-justify lg:mx-auto">
+            Desarrollador con 1 año de experiencia en desarrollo web.
         </p>
-        <p class="opacity-80 text-[18px] text-justify lg:mx-auto ">
-            I'm a Systems Engineering graduate, passionate about technology and
-            problem-solving, with a creative approach to innovative solutions.
-            Over the past year, I've gained significant experience in both
-            backend and frontend development. My strongest skills are in backend
-            development, but I also manage frontend tasks. This journey has been
-            fueled by my deep, long-standing interest in the world of software
-            development. If you're interested in the projects I've worked on,
-            feel free to check them out.
+        <p class="opacity-80 text-[18px] text-justify lg:mx-auto">
+            Soy egresado de Ingeniería en Sistemas, apasionado por la tecnología
+            y la resolución de problemas, con un enfoque creativo para
+            soluciones innovadoras. Durante el último año, he adquirido
+            experiencia significativa tanto en desarrollo backend como frontend.
+            Mis habilidades más fuertes están en el desarrollo backend, aunque
+            también me desempeño en tareas de frontend. Este camino ha sido
+            impulsado por mi profundo y constante interés en el mundo del
+            desarrollo de software. Si estás interesado en los proyectos en los
+            que he trabajado, no dudes en echarles un vistazo.
             <div class="center">
-                <a href="Projects">
-                    <button class="btn badge2">My portfolio</button>
+                <a href="es/Proyectos">
+                    <button class="btn badge2">Mis Proyectos</button>
                 </a>
             </div>
         </p>
