@@ -77,7 +77,7 @@ portfolioAstro
 ├─ package.json
 ├─ public
 │  ├─ favicon.svg
-│  └─ github.svg
+│  └─ github.png
 ├─ README.md
 ├─ src
 │  ├─ assets

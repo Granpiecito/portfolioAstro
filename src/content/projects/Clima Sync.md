@@ -3,7 +3,7 @@ lang: "en"
 title: "ClimaSync"
 description: "Sistema de control y monitero estadistico"
 image:
-  url: "./github.svg"
+  url: "/github.svg"
   alt: "GitHub wallpaper"
 worksImage1:
   url: ""
