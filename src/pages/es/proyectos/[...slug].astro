@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import ProjectsMarkdown from "../../../layouts/es/ProjectsMarkdown.astro";
 
 export async function getStaticPaths() {
-  const spanishProjects = await getCollection('projects', (project) => project.data.lang === 'es');
+  const spanishProjects = await getCollection('proyectos', (project) => project.data.lang === 'es');
 
   return spanishProjects.map((spanishProjects) => ({
     params: { slug: spanishProjects.slug },

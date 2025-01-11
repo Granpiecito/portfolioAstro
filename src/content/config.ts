@@ -24,7 +24,6 @@ const projectSchema = z.object({
 
 const projectsCollection = defineCollection({
   type: "content",
-  schema: projectSchema,
 });
 
 export const collections = {

@@ -36,6 +36,7 @@ Change logs
 - [Version 0.2.8] - Added text colors in css, fixed navbar bug, change logo, new color for the template, changes composition in projects grid
 - [Version 0.2.9]- Feature Re-desing Home view, added support for multilangue, restructure componets
 - [Version 0.3.0] Feature Add multilingual support with English and Spanish localization, need to fix toggle button from navbar mobile view
+- [Version 0.3.1] Fixed Multilingual rendering error in projects view
 ```
 
 # Introduction
