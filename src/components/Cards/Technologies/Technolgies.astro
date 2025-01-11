@@ -18,7 +18,7 @@ import {technologies} from '../../../assets/js/data';
             <use xlink:href="#ai:ri:arrow-right-up-line"></use>
         </svg>
         <h2 class="text-xl font-bold m-0 z-20">Technologies</h2>
-        <div class="flex flex-col gap-4 overflow-x-auto h-32 md:h-60">
+        <div class="flex flex-col gap-4 mt-4 overflow-x-auto h-32 md:h-60">
             {technologies.map((tech, index) => (
                 <div
                     class=" w-full text-neutral-100 hover:text-neutral-400 ease-in-out transition-colors border-b-neutral-400 border-dashed border-b-1 my-0 flex items-center space-x-2"
@@ -27,7 +27,7 @@ import {technologies} from '../../../assets/js/data';
                     <img 
                         src={tech.logo} 
                         alt={`${tech.text} logo`} 
-                        class="h-12 w-12" 
+                        class="h-15 w-10" 
                     />
             
                     <p class="inline-block whitespace-nowrap text-2xs">
