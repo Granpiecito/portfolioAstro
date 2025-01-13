@@ -1,15 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.querySelector('#header-navbar-toggle');
-    const navbar = document.querySelector('#header-navbar'); 
+const headerNavbar = document.getElementById('header-navbar');
+const headerNavbarToggle = document.getElementById('header-navbar-toggle');
 
-    if (toggleButton && navbar) {
-        toggleButton.addEventListener("click", () => {
+// Escuchar el evento "click" en el botón de toggle
+headerNavbarToggle.addEventListener('click', () => {
+    // Verificar el estado actual de "aria-expanded" y alternarlo
+    const isExpanded = headerNavbarToggle.getAttribute('aria-expanded') === 'true';
+    headerNavbarToggle.setAttribute('aria-expanded', !isExpanded);
 
-            navbar.classList.toggle("hidden");
-
-
-            const isExpanded = toggleButton.getAttribute("aria-expanded") === "true";
-            toggleButton.setAttribute("aria-expanded", !isExpanded);
-        });
+    // Alternar la clase "data-[open]" en el navbar para activar estilos dinámicos
+    if (isExpanded) {
+        headerNavbar.removeAttribute('data-open');
+    } else {
+        headerNavbar.setAttribute('data-open', true);
     }
 });
