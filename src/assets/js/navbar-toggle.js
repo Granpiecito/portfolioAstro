@@ -1,16 +1,28 @@
-const headerNavbar = document.getElementById('header-navbar');
-const headerNavbarToggle = document.getElementById('header-navbar-toggle');
+function initializeNavbarToggle() {
+    const headerNavbar = document.getElementById('header-navbar');
+    const headerNavbarToggle = document.getElementById('header-navbar-toggle');
+    const menuItems = document.querySelectorAll('#header-navbar a'); 
 
-// Escuchar el evento "click" en el botón de toggle
-headerNavbarToggle.addEventListener('click', () => {
-    // Verificar el estado actual de "aria-expanded" y alternarlo
-    const isExpanded = headerNavbarToggle.getAttribute('aria-expanded') === 'true';
-    headerNavbarToggle.setAttribute('aria-expanded', !isExpanded);
+    if (headerNavbar && headerNavbarToggle) {
 
-    // Alternar la clase "data-[open]" en el navbar para activar estilos dinámicos
-    if (isExpanded) {
-        headerNavbar.removeAttribute('data-open');
-    } else {
-        headerNavbar.setAttribute('data-open', true);
+        headerNavbarToggle.addEventListener('click', () => {
+            const isExpanded = headerNavbarToggle.getAttribute('aria-expanded') === 'true';
+            headerNavbarToggle.setAttribute('aria-expanded', !isExpanded);
+
+            if (isExpanded) {
+                headerNavbar.removeAttribute('data-open');
+            } else {
+                headerNavbar.setAttribute('data-open', true);
+            }
+        });
+
+        menuItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                headerNavbarToggle.setAttribute('aria-expanded', false);
+                headerNavbar.removeAttribute('data-open');
+            });
+        });
     }
-});
+}
+
+document.addEventListener('DOMContentLoaded', initializeNavbarToggle);

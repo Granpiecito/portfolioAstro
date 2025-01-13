@@ -69,3 +69,10 @@ p {
     border-color: #acb5c71a;
 }
 
+.group-aria-[expanded]:translate-y-5px {
+    transform: translateY(5px);
+}
+
+.group-aria-[expanded]:rotate-45 {
+    transform: rotate(45deg);
+}
