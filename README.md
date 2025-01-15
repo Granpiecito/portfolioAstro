@@ -39,6 +39,7 @@ Change logs
 - [Version 0.3.1] Fixed Multilingual rendering error in projects view
 - [Version 0.3.2] Fixed movile footer not center, change the margin top for the projects view, translate about to spanish
 - [Version 0.3.3] Feature added resposive nav menu
+- [Version 0.3.4] Fixed Navbar toggle problem
 ```
 
 # Introduction
@@ -75,16 +76,19 @@ Inside of this Astro project, you'll see the following folders and files:
 
 ```
 portfolioAstro
+├─ astro.config.mjs
+├─ package-lock.json
 ├─ package.json
 ├─ public
 │  ├─ favicon.svg
-│  └─ github.png
+│  ├─ github.png
+│  └─ github.svg
 ├─ README.md
 ├─ src
 │  ├─ assets
 │  │  ├─ js
 │  │  │  ├─ data.js
-│  │  │  ├─ index.js
+│  │  │  ├─ navbar-toggle.js
 │  │  │  ├─ scroll-effect.js
 │  │  │  └─ typewritter.js
 │  │  └─ style.css
@@ -92,33 +96,49 @@ portfolioAstro
 │  │  ├─ About
 │  │  │  ├─ About.astro
 │  │  │  └─ es
+│  │  │     └─ About.astro
 │  │  ├─ Card.astro
 │  │  ├─ Cards
 │  │  │  ├─ Container
 │  │  │  │  ├─ Cardscontainer.astro
 │  │  │  │  └─ es
+│  │  │  │     └─ Cardscontainer.astro
 │  │  │  ├─ Info
 │  │  │  │  ├─ es
+│  │  │  │  │  └─ Info.astro
 │  │  │  │  └─ Info.astro
 │  │  │  ├─ Interesting
 │  │  │  │  ├─ es
+│  │  │  │  │  └─ Interesting.astro
 │  │  │  │  └─ Interesting.astro
 │  │  │  ├─ Projects
-│  │  │  │  └─ Card.astro
+│  │  │  │  ├─ Card.astro
+│  │  │  │  └─ es
+│  │  │  │     └─ Card.astro
 │  │  │  └─ Technologies
 │  │  │     ├─ es
+│  │  │     │  └─ Technolgies.astro
 │  │  │     └─ Technolgies.astro
 │  │  ├─ Footer.astro
 │  │  ├─ Navbar
 │  │  │  ├─ es
+│  │  │  │  └─ Navbar.astro
 │  │  │  └─ Navbar.astro
 │  │  ├─ ProfilePicture.astro
 │  │  └─ Separator.astro
+│  ├─ config
+│  │  ├─ Generatelinks.ts
+│  │  └─ i18n.ts
 │  ├─ content
 │  │  ├─ config.ts
-│  │  └─ projects
+│  │  ├─ projects
+│  │  │  ├─ Clima Sync.md
+│  │  │  ├─ Nica Places.md
+│  │  │  ├─ Portfolio.md
+│  │  │  ├─ SIME.md
+│  │  │  └─ Weather App.md
+│  │  └─ proyectos
 │  │     ├─ Clima Sync.md
-│  │     ├─ es
 │  │     ├─ Nica Places.md
 │  │     ├─ Portfolio.md
 │  │     ├─ SIME.md
@@ -136,39 +156,45 @@ portfolioAstro
 │  │  ├─ retrato-3d-personas.png
 │  │  └─ Technologies
 │  │     ├─ Data Base
-│  │     │  ├─ mysql.svg
-│  │     │  ├─ postgresql.svg
-│  │     │  └─ sql-server.svg
+│  │     │  ├─ mysql.png
+│  │     │  ├─ postgresql.png
+│  │     │  └─ sql-server.png
 │  │     ├─ Frameworks
-│  │     │  ├─ Astro_dark.svg
-│  │     │  ├─ boostrap.svg
-│  │     │  ├─ laravel.svg
-│  │     │  ├─ spring.svg
-│  │     │  ├─ svelte.svg
-│  │     │  └─ tailwindcss.svg
+│  │     │  ├─ Astro_dark.png
+│  │     │  ├─ boostrap.png
+│  │     │  ├─ laravel.png
+│  │     │  ├─ spring.png
+│  │     │  ├─ svelte.png
+│  │     │  └─ tailwindcss.png
 │  │     └─ LanguagesP
-│  │        ├─ csharp.svg
-│  │        ├─ css.svg
-│  │        ├─ dart.svg
-│  │        ├─ flutter.svg
-│  │        ├─ html5.svg
-│  │        ├─ java.svg
-│  │        ├─ Php_dark.svg
-│  │        └─ typescript.svg
+│  │        ├─ csharp.jpg
+│  │        ├─ css.png
+│  │        ├─ dart.png
+│  │        ├─ flutter.png
+│  │        ├─ html5.png
+│  │        ├─ java.png
+│  │        ├─ Php_dark.png
+│  │        └─ typescript.png
 │  ├─ layouts
 │  │  ├─ es
-│  │  │  └─ Layout.astro
+│  │  │  ├─ Layout.astro
+│  │  │  └─ ProjectsMarkdown.astro
 │  │  ├─ Layout.astro
 │  │  └─ ProjectsMarkdown.astro
 │  └─ pages
 │     ├─ es
-│     │  └─ index.astro
+│     │  ├─ index.astro
+│     │  ├─ proyectos
+│     │  │  └─ [...slug].astro
+│     │  └─ Proyectos.astro
 │     ├─ index.astro
 │     ├─ projects
 │     │  └─ [...slug].astro
 │     └─ Projects.astro
 ├─ tailwind.config.mjs
 └─ tsconfig.json
+
+
 ```
 
 ## 🧞 Commands
@@ -181,6 +207,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm install`             | Install the dependencies                         |
 | `npm astro add tailwind`  | Install Tailwind css dependencies                |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-
-
 
