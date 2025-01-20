@@ -18,39 +18,39 @@ export const technologies = [
     
     {
         text: 'Html',
-        logo: '../src/img/Technologies/LanguagesP/html5.svg',
+        logo: '/Technologies/LanguagesP/html5.png',
     },
     {
         text: 'Php',
-        logo: '../src/img/Technologies/LanguagesP/Php_dark.svg',
+        logo: '/Technologies/LanguagesP/Php_dark.png',
     },
     {
         text: 'Flutter',
-        logo: '../src/img/Technologies/LanguagesP/flutter.svg',
+        logo: '/Technologies/LanguagesP/flutter.png',
     },
     {
         text: 'Astro',
-        logo: '../src/img/Technologies/Frameworks/Astro_dark.svg',
+        logo: '/Technologies/Frameworks/Astro_dark.png',
     },
     {
         text: 'Laravel',
-       logo: '../src/img/Technologies/Frameworks/laravel.svg',
+       logo: '/Technologies/Frameworks/laravel.png',
     },
     {
         text: 'Springboot',
-        logo: '../src/img/Technologies/Frameworks/spring.svg',
+        logo: '/Technologies/Frameworks/spring.png',
     },
     {
         text: 'Tailwind Css',
-        logo: '../src/img/Technologies/Frameworks/tailwindcss.svg',
+        logo: '/Technologies/Frameworks/tailwindcss.png',
     },
     {
         text: 'Mysql',
-        logo: '../src/img/Technologies/Data Base/mysql.svg',
+        logo: '/Technologies/Data Base/mysql.png',
     },
     {
         text: 'Sql Server',
-        logo:'../src/img/Technologies/Data Base/sql-server.svg',
+        logo:'/Technologies/Data Base/sql-server.png',
     }
 
 ];

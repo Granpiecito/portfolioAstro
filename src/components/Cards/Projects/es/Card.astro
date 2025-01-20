@@ -1,0 +1,27 @@
+---
+interface Props {
+  url: string;
+  image: string;
+  title: string;
+}
+
+const { url, image, title } = Astro.props as Props;
+
+---
+
+<li class="flex grid-cols-1 justify-between: text-center">
+    <a class="card_link" href={url}>
+        <div class="card_img_container flex justify-center: aling-between">
+            <img 
+                class="card_image"
+                width="220"
+                height="110"
+                src={image} 
+                alt="Project Image"
+            />
+        </div>
+        <h3 class="card_title">
+            {title}
+        </h3>
+    </a>
+</li>

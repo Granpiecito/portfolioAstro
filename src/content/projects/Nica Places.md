@@ -1,19 +1,20 @@
 ---
-title: 'Nica Places'
-description: 'App for traveling'
+lang: "en"
+title: "Nica Places"
+description: "App for traveling"
 image:
-    url: '/github.svg'
-    alt: 'GitHub wallpaper'
+  url: "/github.svg"
+  alt: "GitHub wallpaper"
 worksImage1:
-    url: '/'
-    alt: 'first image of your project.'
+  url: "/Proyectosimg/Nicaplaces/Nicaplaces1.jpg"
+  alt: "First image of your project"
 worksImage2:
-    url: '/'
-    alt: 'second image of your project.'
-platform: Mobile
-stack: Flutter, Dart
-website: https://github.com/github.com
-github: https://github.com/github.com
+  url: "/Proyectosimg/Nicaplaces/nicaplaces2.jpg"
+  alt: "Second image of your project"
+platform: "Web | Movile"
+stack: 'Flutter, Dart, Php'
+website: 'N/A'
+github: "https://github.com/Granpiecito/Aspire-Code"
 ---
 
-App made in flutter for the contest Hackathon IA 2023, in the category Start-up
+Application developed to compete in Hackathon 2023, aimed at promoting tourism by showcasing the cultural activities of our country. It also provides information about accessible sites for people with motor disabilities. This project participated in the Startup category.

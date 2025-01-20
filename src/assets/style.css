@@ -1,46 +1,32 @@
-
-/*Tech Card Slider*/
-.tech-card
-    {
-        background-image: linear-gradient(to bottom, rgba(255, 255,255, 0.05),
-        rgba(255, 255, 255, 0.033));
-        padding-block: 2rem;
-        border-top-width: 1px;
-        border-bottom-width: 1px;
-        border-color: #ffffff26;
-        animation: 35s slide infinite linear;
- }  
-
- @keyframes slide {
-    from  {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-60%);
-    }
+/*Body template theme*/
+html {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #080708;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-/*Modal*/
-.tech-modal
+.body-theme
 {
-    background-image: linear-gradient(to bottom, #000, hsla(0, 0%, 0%, 0.9));
-    border: 2px solid #ffffff26;
-    animation: fade-in 0.5s forwards;
+    background: linear-gradient(180deg, #252120 50%, #080708 100%);
 }
 
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-    70% {
-        opacity: 0.7;
-        transform: scale(1.2);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+/*text colors*/
+h2,p,span,a,small{
+    color: white;
 }
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
 /*Badge name*/
 .badge {
     background-color: #0099e0;
@@ -58,14 +44,35 @@
     padding: 0.3em 0.6em 0.2em;
 }
 
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
+
+.header-animate[data-astro-cid-4rde66u6] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: reduce-header linear both;
+    animation-timeline: scroll;
+    animation-range: 0 150px;
 }
 
+/*Colors for the nav backdrops buttons*/
+.hover\:bg-brand-gray\/5:hover {
+    background-color: #acb5c70d;
+}
+.hover\:border-brand-gray\/10:hover {
+    border-color: #acb5c71a;
+}
+.hover\:bg-brand-gray\/5:hover {
+    background-color: #acb5c70d;
+}
+.hover\:border-brand-gray\/10:hover {
+    border-color: #acb5c71a;
+}
 
+.group-aria-[expanded]:translate-y-5px {
+    transform: translateY(5px);
+}
 
+.group-aria-[expanded]:rotate-45 {
+    transform: rotate(45deg);
+}

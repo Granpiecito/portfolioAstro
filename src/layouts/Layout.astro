@@ -4,16 +4,14 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
-import '../assets/style.css'
-import Navbar from "../components/Navbar.astro";
+import "../assets/style.css";
+import Navbar from "../components/Navbar/Navbar.astro";
 ---
 
 <!doctype html>
 <html class="scroll-smooth hover:scroll-auto" lang="en">
-   
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="Astro Description" />
@@ -22,22 +20,25 @@ import Navbar from "../components/Navbar.astro";
         <meta name="generator" content={Astro.generator} />
 
         <!-- Boxicons -->
-        <link rel="stylesheet"
-        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+        />
 
         <!-- Google_fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
 
         <title>{title}</title>
-        <Navbar/>
+        <Navbar />
         <ViewTransitions />
     </head>
-    <body class="bg-black text-white">
+    <body class="body-theme">
+        <script src="/src/assets/js/navbar-toggle.js" defer></script>
         <slot />
-        <script src="../assets/js/index.js">
-        </script>
-    </body>
-    <Footer/>
+    </body><Footer />
 </html>
