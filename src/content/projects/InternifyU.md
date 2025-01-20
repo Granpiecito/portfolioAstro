@@ -6,10 +6,10 @@ image:
   url: "/github.svg"
   alt: "GitHub wallpaper"
 worksImage1:
-  url: "/Proyectosimg/InternifyU/internifyu1.jpg"
+  url: "/Proyectosimg/Internifyu/internifyu1.jpg"
   alt: "First image of your project"
 worksImage2:
-  url: "/Proyectosimg/InternifyU/internifyu2.jpg"
+  url: "/Proyectosimg/Internifyu/internifyu2.jpg"
   alt: "Second image of your project"
 platform: "Web"
 stack: 'Php, Mysql, Javascript'
