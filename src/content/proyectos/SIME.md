@@ -3,13 +3,13 @@ lang: "es"
 title: "SIME"
 description: "Sistema de control y monitero estadistico"
 image:
-  url: "./github.svg"
+  url: "/github.svg"
   alt: "GitHub wallpaper"
 worksImage1:
-  url: ""
+  url: "/Proyectosimg/Sime/Sime1.jpg"
   alt: "First image of your project"
 worksImage2:
-  url: ""
+  url: "/Proyectosimg/Sime/sime2.jpg"
   alt: "Second image of your project"
 platform: "Web"
 stack: 'Php, Laravel, Mysql, Javascript'

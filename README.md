@@ -40,7 +40,7 @@ Change logs
 - [Version 0.3.2] Fixed movile footer not center, change the margin top for the projects view, translate about to spanish
 - [Version 0.3.3] Feature added resposive nav menu
 - [Version 0.3.4] Fixed Navbar toggle problem
-- [Version 0.3.5]
+- [Version 0.3.5] Fixed Navabar toogle, Fixed error markdown, added new folder in public for projects images
 ```
 
 # Introduction

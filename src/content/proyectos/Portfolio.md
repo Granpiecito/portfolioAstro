@@ -1,19 +1,19 @@
 ---
 lang: "es"
-title: 'Portafolio'
-description: 'Portafolio Personal'
+title: "Portafolio"
+description: "Portafolio Personal"
 image:
-    url: './github.svg'
-    alt: 'GitHub wallpaper'
+  url: "/github.svg"
+  alt: "GitHub wallpaper"
 worksImage1:
-    url: ""
+  url: "/Proyectosimg/Portfolio/portfolio1.jpg"
   alt: "First image of your project"
 worksImage2:
-  url: ""
+  url: "/Proyectosimg/Portfolio/portfolio2.jpg"
   alt: "Second image of your project"
 platform: "Web"
 stack: 'Astro, Tailwind Css, TypeScript'
-website: ''
+website: 'N/A'
 github: 'https://github.com/Granpiecito/portfolioAstro.git'
 ---
 

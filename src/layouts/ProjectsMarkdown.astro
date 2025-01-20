@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 <BaseLayout title=`Projects | ${frontmatter.title}`>
     <div class="grid flex-cols gap-4 mt-24 scrollbar-m-36 md:justify-items-center sm:justify-items-center">
         <div class="grid flex-cols gap-6 justify-items-center">
-            <img width="300" height="259" alt="githubpj" src="../github.svg"/>
+            <img width="300" height="259" alt="githubpj" src="/github.svg"/>
         </div>
         <h2 class="grid px-20 justify-items-center font-bold text-2xl sm:justify-items-center">{frontmatter.title}</h2>
         <a class="grid px-20 justify-items-between text-xl font-semibold">

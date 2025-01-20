@@ -1,17 +1,17 @@
 ---
 lang: "es"
-title: 'Nica Places'
-description: 'App para viajes'
+title: "Nica Places"
+description: "App para viajes"
 image:
-    url: './github.svg'
-    alt: 'GitHub wallpaper'
+  url: "/github.svg"
+  alt: "GitHub wallpaper"
 worksImage1:
-    url: ""
+  url: "/Proyectosimg/Nicaplaces/Nicaplaces1.jpg"
   alt: "First image of your project"
 worksImage2:
-  url: ""
+  url: "/Proyectosimg/Nicaplaces/nicaplaces2.jpg"
   alt: "Second image of your project"
-platform: 'Web | Movil'
+platform: "Web | Movil"
 stack: 'Flutter, Dart, Php'
 website: 'N/A'
 github: 'https://github.com/Granpiecito/Aspire-Code'
