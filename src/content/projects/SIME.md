@@ -12,7 +12,7 @@ worksImage2:
   url: ""
   alt: "Second image of your project"
 platform: "Web"
-stack: "Php, Laravel,Vite js, Mysql"
+stack: 'Php, Laravel,Vite js, Mysql'
 website: ""
 github: ""
 ---

@@ -12,8 +12,8 @@ worksImage1:
 worksImage2:
   url: ""
   alt: "Second image of your project"
-platform: Web
-stack: Html, Css, JavaScript
+platform: "Web"
+stack: 'Html, Css, JavaScript'
 website: 'https://mapanicaraguaexotica.economiafamiliar.gob.ni'
 github: 'Privado'
 ---

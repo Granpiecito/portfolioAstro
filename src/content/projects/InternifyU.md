@@ -12,8 +12,8 @@ worksImage2:
   url: ""
   alt: "Second image of your project"
 platform: "Web"
-stack: "Php, Mysql, Javascript"
-website: "N/A"
+stack: 'Php, Mysql, Javascript'
+website: 'N/A'
 github: "https://github.com/juanjose23/InternifyU"
 ---
 

@@ -12,8 +12,8 @@ worksImage2:
   url: ""
   alt: "Second image of your project"
     alt: ""
-platform: Web
-stack: Html, Css, JavaScript
+platform: "Web"
+stack: 'Html, Css, JavaScript'
 website: 'https://mapaapicultura.economiafamiliar.gob.ni/index.html'
 github: 'Privado'
 ---

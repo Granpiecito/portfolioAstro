@@ -11,8 +11,8 @@ worksImage1:
 worksImage2:
   url: ""
   alt: "Second image of your project"
-platform: Web | Movile
-stack: Flutter, Dart
+platform: 'Web | Movile'
+stack: 'Flutter, Dart, Php'
 website: 'N/A'
 github: 'https://github.com/Granpiecito/Aspire-Code'
 ---

@@ -11,8 +11,8 @@ worksImage1:
 worksImage2:
     url: ""
     alt: ""
-platform: Web
-stack: Html, Css, JavaScript
+platform: "Web"
+stack: 'Html, Css, JavaScript'
 website: 'https://mapaapicultura.economiafamiliar.gob.ni/index.html'
 github: 'N/A'
 ---
