@@ -40,6 +40,7 @@ Change logs
 - [Version 0.3.2] Fixed movile footer not center, change the margin top for the projects view, translate about to spanish
 - [Version 0.3.3] Feature added resposive nav menu
 - [Version 0.3.4] Fixed Navbar toggle problem
+- [Version 0.3.5]
 ```
 
 # Introduction
@@ -82,15 +83,48 @@ portfolioAstro
 ├─ public
 │  ├─ favicon.svg
 │  ├─ github.png
-│  └─ github.svg
+│  ├─ github.svg
+│  ├─ Projects
+│  │  ├─ Beekeeping map
+│  │  │  ├─ apicola1.jpg
+│  │  │  └─ apicola2.jpg
+│  │  ├─ Exotic nic map
+│  │  │  ├─ Vivero1.jpg
+│  │  │  └─ vivero2.jpg
+│  │  ├─ InternifyU
+│  │  ├─ Nica places
+│  │  ├─ Portfolio
+│  │  │  ├─ portfolio1.jpg
+│  │  │  └─ portfolio2.jpg
+│  │  └─ Sime
+│  └─ Technologies
+│     ├─ Data Base
+│     │  ├─ mysql.png
+│     │  ├─ postgresql.png
+│     │  └─ sql-server.png
+│     ├─ Frameworks
+│     │  ├─ Astro_dark.png
+│     │  ├─ boostrap.png
+│     │  ├─ laravel.png
+│     │  ├─ spring.png
+│     │  ├─ svelte.png
+│     │  └─ tailwindcss.png
+│     └─ LanguagesP
+│        ├─ csharp.jpg
+│        ├─ css.png
+│        ├─ dart.png
+│        ├─ flutter.png
+│        ├─ html5.png
+│        ├─ java.png
+│        ├─ Php_dark.png
+│        └─ typescript.png
 ├─ README.md
 ├─ src
 │  ├─ assets
 │  │  ├─ js
 │  │  │  ├─ data.js
 │  │  │  ├─ navbar-toggle.js
-│  │  │  ├─ scroll-effect.js
-│  │  │  └─ typewritter.js
+│  │  │  └─ scroll-effect.js
 │  │  └─ style.css
 │  ├─ components
 │  │  ├─ About
@@ -132,49 +166,24 @@ portfolioAstro
 │  ├─ content
 │  │  ├─ config.ts
 │  │  ├─ projects
-│  │  │  ├─ Clima Sync.md
+│  │  │  ├─ InternifyU.md
+│  │  │  ├─ MapaApicultura.md
+│  │  │  ├─ Mapavivero.md
 │  │  │  ├─ Nica Places.md
 │  │  │  ├─ Portfolio.md
-│  │  │  ├─ SIME.md
-│  │  │  └─ Weather App.md
+│  │  │  └─ SIME.md
 │  │  └─ proyectos
-│  │     ├─ Clima Sync.md
+│  │     ├─ InternifyU.md
+│  │     ├─ MapaApicultura.md
+│  │     ├─ Mapavivero.md
 │  │     ├─ Nica Places.md
 │  │     ├─ Portfolio.md
-│  │     ├─ SIME.md
-│  │     └─ Weather App.md
+│  │     └─ SIME.md
 │  ├─ env.d.ts
 │  ├─ img
 │  │  ├─ Jean-dev-logo1.png
-│  │  ├─ Jeandevletras.svg
 │  │  ├─ Jean_dev_logo.svg
-│  │  ├─ profileimg.avif
-│  │  ├─ Projects
-│  │  │  └─ Portfolio
-│  │  │     ├─ portfolio1.png
-│  │  │     └─ portfolio2.png
-│  │  ├─ retrato-3d-personas.png
-│  │  └─ Technologies
-│  │     ├─ Data Base
-│  │     │  ├─ mysql.png
-│  │     │  ├─ postgresql.png
-│  │     │  └─ sql-server.png
-│  │     ├─ Frameworks
-│  │     │  ├─ Astro_dark.png
-│  │     │  ├─ boostrap.png
-│  │     │  ├─ laravel.png
-│  │     │  ├─ spring.png
-│  │     │  ├─ svelte.png
-│  │     │  └─ tailwindcss.png
-│  │     └─ LanguagesP
-│  │        ├─ csharp.jpg
-│  │        ├─ css.png
-│  │        ├─ dart.png
-│  │        ├─ flutter.png
-│  │        ├─ html5.png
-│  │        ├─ java.png
-│  │        ├─ Php_dark.png
-│  │        └─ typescript.png
+│  │  └─ profileimg.png
 │  ├─ layouts
 │  │  ├─ es
 │  │  │  ├─ Layout.astro
@@ -194,7 +203,6 @@ portfolioAstro
 ├─ tailwind.config.mjs
 └─ tsconfig.json
 
-
 ```
 
 ## 🧞 Commands
@@ -207,4 +215,5 @@ All commands are run from the root of the project, from a terminal:
 | `npm install`             | Install the dependencies                         |
 | `npm astro add tailwind`  | Install Tailwind css dependencies                |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
+
 

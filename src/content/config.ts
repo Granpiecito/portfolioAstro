@@ -19,7 +19,7 @@ const projectSchema = z.object({
   platform: z.string(),
   stack: z.string(),
   website: z.string(),
-  github: z.string(),
+  github: z.string()
 });
 
 const projectsCollection = defineCollection({

@@ -1,9 +1,9 @@
 ---
 lang: "en"
 title: "SIME"
-description: "Sistema de control y monitero estadistico"
+description: "Control and Statistical Monitoring System"
 image:
-  url: "/github.svg"
+  url: "./github.svg"
   alt: "GitHub wallpaper"
 worksImage1:
   url: ""
@@ -12,9 +12,9 @@ worksImage2:
   url: ""
   alt: "Second image of your project"
 platform: "Web"
-stack: "Php, Laravel, Mysql, Javascript"
+stack: "Php, Laravel,Vite js, Mysql"
 website: ""
 github: ""
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie.
+A system designed to oversee the progress and outcomes of programs and projects aimed at supporting entrepreneurs receiving assistance from MEFCCA.

@@ -1,20 +1,20 @@
 ---
 lang: "es"
-title: 'Portfolio'
-description: 'Personal Portfolio'
+title: 'Portafolio'
+description: 'Portafolio Personal'
 image:
-    url: '/github.svg'
+    url: './github.svg'
     alt: 'GitHub wallpaper'
 worksImage1:
-    url: '/src/img/Projects/Portfolio/portfolio1.png'
-    alt: '#'
+    url: ""
+  alt: "First image of your project"
 worksImage2:
-    url: '/src/img/Projects/Portfolio/portfolio2.png'
-    alt: '#'
-platform: Web | Mobile
-stack: Astro, Tailwind Css
-website: https://github.com/github.com
+  url: ""
+  alt: "Second image of your project"
+platform: Web
+stack: Astro, Tailwind Css, TypeScript
+website: ''
 github: https://github.com/Granpiecito/portfolioAstro.git
 ---
 
-Portfolio created with Astro to learn Astro and Tailwind CSS. I intend to develop this project into a template and add more functionalities.
+Proyecto diseñado con el objetivo de crear una plantilla para portafolios, mientras se adquieren conocimientos más profundos sobre el framework Astro, Tailwind CSS y TypeScript.
