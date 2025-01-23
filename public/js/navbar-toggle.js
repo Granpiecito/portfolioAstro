@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', initializeNavbarToggle);
 
 function initializeNavbarToggle() {
     const headerNavbar = document.getElementById('header-navbar');
