@@ -9,7 +9,7 @@ export const socials = [
     },
     {
         logo: 'bx bxs-envelope',
-        url: ''
+        url: 'mailto:jeanpierresperrymanaleman@gmail.com?cc=jeanpierresleroy@outlook.com&subject=We%20are%20Interested%20to%20work%20with%20you',
     }
 
 ];
