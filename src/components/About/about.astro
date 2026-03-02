@@ -1,0 +1,48 @@
+---
+import { useTranslations, type Lang } from "../../i18n/index";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const stats = [
+  { num: "1+",   label: t("about.stat.exp") },
+  { num: "12+",  label: t("about.stat.tech") },
+  { num: "100%", label: t("about.stat.open") },
+  { num: "∞",    label: t("about.stat.passion") },
+];
+---
+
+<section id="about" class="py-28 px-6 max-w-5xl mx-auto">
+
+  <div class="reveal">
+    <p class="section-label">{t("about.label")}</p>
+    <h2 class="font-bold mb-12" style="font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: -0.02em; white-space: pre-line;">
+      {t("about.title")}
+    </h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Text -->
+    <div class="reveal space-y-4">
+      <p style="color: var(--muted); font-size: 0.97rem; line-height: 1.75;">{t("about.p1")}</p>
+      <p style="color: var(--muted); font-size: 0.97rem; line-height: 1.75;">{t("about.p2")}</p>
+      <p style="color: var(--muted); font-size: 0.97rem; line-height: 1.75;">{t("about.p3")}</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="reveal grid grid-cols-2 gap-4">
+      {stats.map((s) => (
+        <div class="glass glass-hover rounded-2xl p-6 text-center">
+          <div class="mono font-bold mb-1" style="font-size: 2.2rem; color: var(--cyan); line-height: 1;">{s.num}</div>
+          <div class="text-xs" style="color: var(--muted);">{s.label}</div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

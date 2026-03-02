@@ -1,0 +1,19 @@
+---
+import { useTranslations, type Lang } from "../../i18n/index";
+import { personal } from "../../assets/js/data";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<footer class="py-8 px-6 text-center text-sm" style="border-top: 1px solid var(--border); color: var(--muted);">
+  <p>
+    © {new Date().getFullYear()}
+    <span style="color: var(--cyan);">{personal.alias}</span>
+    · {t("footer.crafted")}
+  </p>
+</footer>

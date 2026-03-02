@@ -1,0 +1,205 @@
+---
+import type { Project } from "../../assets/js/data";
+import { type Lang } from "../../i18n/index";
+
+interface Props {
+  project: Project;
+  lang: Lang;
+  index: number;
+  githubLabel: string;
+  liveLabel: string;
+}
+
+const { project, lang, index, githubLabel, liveLabel } = Astro.props;
+const desc = project.description[lang];
+const num = String(index + 1).padStart(2, "0");
+
+// Unique preview gradient per color
+const gradients: Record<string, string> = {
+  cyan:   "linear-gradient(135deg, #0d1f1a 0%, #0a2818 50%, #061a12 100%)",
+  purple: "linear-gradient(135deg, #1a0d20 0%, #180828 50%, #100520 100%)",
+  blue:   "linear-gradient(135deg, #0d1220 0%, #091828 50%, #051020 100%)",
+  orange: "linear-gradient(135deg, #201208 0%, #1a0c04 50%, #120800 100%)",
+};
+
+const blobColors: Record<string, [string, string]> = {
+  cyan:   ["#00f5d4", "#00c896"],
+  purple: ["#9933ff", "#00f5d4"],
+  blue:   ["#0066ff", "#00f5d4"],
+  orange: ["#ff6600", "#ffaa00"],
+};
+
+const [blob1, blob2] = blobColors[project.color];
+const gradient = gradients[project.color];
+
+// Mock UI per preview type
+const isMobile    = project.preview === "mobile";
+const isApi       = project.preview === "api";
+const isMap       = project.preview === "map";
+const isDashboard = project.preview === "dashboard";
+---
+
+<article class="glass glass-hover rounded-2xl overflow-hidden reveal">
+
+  <!-- Preview area -->
+  <div class="relative h-44 overflow-hidden" style={`background: ${gradient};`}>
+    <!-- Blobs -->
+    <div class="absolute rounded-full pointer-events-none" style={`width:160px;height:160px;background:${blob1};filter:blur(45px);opacity:.3;top:-40px;right:-20px;`}></div>
+    <div class="absolute rounded-full pointer-events-none" style={`width:110px;height:110px;background:${blob2};filter:blur(35px);opacity:.25;bottom:-20px;left:20px;`}></div>
+
+    <!-- Browser bar -->
+    <div class="absolute top-0 left-0 right-0 h-7 flex items-center gap-1.5 px-3 z-10"
+      style="background:rgba(0,0,0,0.5); border-bottom:1px solid rgba(255,255,255,0.05);">
+      <span class="w-2 h-2 rounded-full bg-red-400"></span>
+      <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+      <span class="w-2 h-2 rounded-full bg-green-400"></span>
+      <span class="ml-2 mono text-xs px-2 py-0.5 rounded flex-1 max-w-[180px]"
+        style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.07); color:var(--muted);">
+        {project.id}.dev
+      </span>
+    </div>
+
+    <!-- Mock content per type -->
+    <div class="absolute inset-0 flex items-center justify-center pt-7 px-4">
+
+      {/* Web / ecommerce card UI */}
+      {(!isMobile && !isApi && !isMap && !isDashboard) && (
+        <div class="w-4/5 space-y-2" style="position:relative;z-index:1;">
+          <div class="rounded-xl p-3" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);">
+            <div class="flex gap-2 items-center mb-2">
+              <div class="w-7 h-7 rounded-lg" style={`background:${blob1}22;border:1px solid ${blob1}44;`}></div>
+              <div class="flex-1 space-y-1">
+                <div class="h-1.5 rounded-full w-2/5" style={`background:${blob1}66;`}></div>
+                <div class="h-1.5 rounded-full w-3/5" style="background:rgba(255,255,255,0.1);"></div>
+              </div>
+            </div>
+            <div class="space-y-1.5">
+              <div class="h-1.5 rounded-full" style="background:rgba(255,255,255,0.08);"></div>
+              <div class="h-1.5 rounded-full w-3/4" style="background:rgba(255,255,255,0.06);"></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="rounded-lg p-2" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);">
+              <div class="h-1.5 rounded-full mb-1.5" style={`background:${blob1}44;width:50%;`}></div>
+              <div class="h-1.5 rounded-full" style="background:rgba(255,255,255,0.08);"></div>
+            </div>
+            <div class="rounded-lg p-2" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);">
+              <div class="h-1.5 rounded-full mb-1.5" style="background:rgba(255,255,255,0.1);width:60%;"></div>
+              <div class="h-1.5 rounded-full" style="background:rgba(255,255,255,0.06);width:40%;"></div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mobile phone mockup */}
+      {isMobile && (
+        <div class="w-20 h-36 rounded-2xl overflow-hidden flex flex-col" style="background:rgba(0,0,0,0.6);border:2px solid rgba(255,255,255,0.12);position:relative;z-index:1;">
+          <div class="h-3 flex items-center justify-center flex-shrink-0" style="background:rgba(0,0,0,0.8);">
+            <div class="w-7 h-1 rounded-full" style="background:rgba(255,255,255,0.15);"></div>
+          </div>
+          <div class="flex-1 p-2 space-y-1.5">
+            <div class="h-10 rounded-lg" style={`background:${blob1}18;border:1px solid ${blob1}30;`}></div>
+            <div class="h-1.5 rounded-full" style="background:rgba(255,255,255,0.1);"></div>
+            <div class="h-1.5 rounded-full w-3/4" style="background:rgba(255,255,255,0.07);"></div>
+            <div class="h-1.5 rounded-full w-1/2" style={`background:${blob1}50;`}></div>
+            <div class="h-5 rounded-lg mt-auto" style={`background:${blob1}20;border:1px solid ${blob1}35;`}></div>
+          </div>
+        </div>
+      )}
+
+      {/* API / terminal mockup */}
+      {isApi && (
+        <div class="w-4/5 rounded-xl p-3 mono text-xs space-y-1.5" style="background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.07);position:relative;z-index:1;">
+          <div style={`color:${blob1}80;`}>POST /api/v1/auth/login</div>
+          <div style="color:rgba(255,255,255,0.25);">Authorization: Bearer •••</div>
+          <div class="rounded-lg p-2 mt-1" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.05);">
+            <div class="text-green-400">200 OK</div>
+            <div style="color:rgba(255,255,255,0.3);">{"{ \"token\": \"eyJ...\" }"}</div>
+          </div>
+          <div style={`color:${blob1}55;`}>GET /api/v1/users/me</div>
+          <div class="rounded-lg px-2 py-1" style="background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.05);">
+            <div class="text-green-400">200 OK</div>
+          </div>
+        </div>
+      )}
+
+      {/* Map mockup */}
+      {isMap && (
+        <div class="w-4/5 h-24 rounded-xl overflow-hidden relative" style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.07);position:relative;z-index:1;">
+          <!-- Grid lines -->
+          <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 16px 16px;"></div>
+          <!-- Map pins -->
+          <div class="absolute w-3 h-3 rounded-full" style={`background:${blob1};top:25%;left:30%;box-shadow:0 0 8px ${blob1};`}></div>
+          <div class="absolute w-2 h-2 rounded-full" style={`background:${blob2};top:55%;left:60%;box-shadow:0 0 6px ${blob2};`}></div>
+          <div class="absolute w-2 h-2 rounded-full" style={`background:${blob1};top:40%;left:75%;box-shadow:0 0 6px ${blob1};opacity:0.7;`}></div>
+          <!-- Radius circle -->
+          <div class="absolute w-12 h-12 rounded-full" style={`border:1px solid ${blob1}40;top:10%;left:22%;`}></div>
+        </div>
+      )}
+
+      {/* Dashboard mockup */}
+      {isDashboard && (
+        <div class="w-4/5 space-y-2" style="position:relative;z-index:1;">
+          <div class="grid grid-cols-3 gap-1.5">
+            {[blob1, blob2, "rgba(255,255,255,0.15)"].map((c) => (
+              <div class="rounded-lg p-2 text-center" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);">
+                <div class="h-1.5 rounded-full mb-1 mx-auto w-2/3" style={`background:${c}60;`}></div>
+                <div class="h-1 rounded-full mx-auto w-1/2" style="background:rgba(255,255,255,0.08);"></div>
+              </div>
+            ))}
+          </div>
+          <div class="rounded-xl p-3" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
+            <div class="flex items-end gap-1 h-8">
+              {[40,65,35,80,55,90,45,70].map((h) => (
+                <div class="flex-1 rounded-sm" style={`height:${h}%;background:${blob1}${h > 60 ? "90" : "40"};`}></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+    </div>
+  </div>
+
+  <!-- Card body -->
+  <div class="p-5">
+    <div class="flex justify-between items-center mb-3">
+      <span class="mono text-xs" style="color:var(--cyan); opacity:0.55;">{num}</span>
+      <div class="flex gap-2">
+        {project.github && (
+          <a href={project.github} target="_blank" rel="noopener"
+            class="mono text-xs px-2.5 py-1 rounded-md transition-all duration-200"
+            style="background:var(--surface); border:1px solid var(--border); color:var(--muted);"
+            onmouseover="this.style.borderColor='var(--cyan-border)'; this.style.color='var(--cyan)';"
+            onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--muted)';">
+            {githubLabel} ↗
+          </a>
+        )}
+        {project.live && (
+          <a href={project.live} target="_blank" rel="noopener"
+            class="mono text-xs px-2.5 py-1 rounded-md transition-all duration-200"
+            style="background:var(--surface); border:1px solid var(--border); color:var(--muted);"
+            onmouseover="this.style.borderColor='var(--cyan-border)'; this.style.color='var(--cyan)';"
+            onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--muted)';">
+            {liveLabel} ↗
+          </a>
+        )}
+      </div>
+    </div>
+
+    <h3 class="font-semibold text-base mb-1.5 transition-colors duration-200 project-title">{project.title}</h3>
+    <p class="text-sm mb-4 leading-relaxed" style="color:var(--muted);">{desc}</p>
+
+    <div class="flex justify-between items-center">
+      <div class="flex flex-wrap gap-1.5">
+        {project.tags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+      <span class="project-arrow text-base transition-all duration-200" style="color:var(--muted); opacity:0;">→</span>
+    </div>
+  </div>
+</article>
+
+<style>
+  article:hover .project-title { color: var(--cyan); }
+  article:hover .project-arrow { opacity: 1 !important; color: var(--cyan) !important; transform: translateX(3px); }
+</style>

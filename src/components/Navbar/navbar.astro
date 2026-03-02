@@ -1,0 +1,120 @@
+---
+import { useTranslations, type Lang } from "../../i18n/index";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const base = lang === "es" ? "/es" : "";
+const otherLang = lang === "en" ? "es" : "en";
+const otherLangUrl = lang === "en" ? "/es" : "/";
+---
+
+<header
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 transition-all duration-300"
+  style="background: rgba(8,12,16,0.0); backdrop-filter: blur(0px);"
+>
+  <!-- Logo -->
+  <a href={`${base}/`} class="mono text-base font-medium tracking-tight" style="color: var(--cyan);">
+    &lt;<span style="color: var(--text);">JeanDev</span> /&gt;
+  </a>
+
+  <!-- Desktop nav -->
+  <nav class="hidden md:flex items-center gap-8">
+    <a href={`${base}/#about`} class="nav-link text-sm" style="color: var(--muted);">{t("nav.about")}</a>
+    <a href={`${base}/#skills`} class="nav-link text-sm" style="color: var(--muted);">{t("nav.skills")}</a>
+    <a href={`${base}/#projects`} class="nav-link text-sm" style="color: var(--muted);">{t("nav.projects")}</a>
+    <a href={`${base}/#contact`} class="nav-link text-sm" style="color: var(--muted);">{t("nav.contact")}</a>
+  </nav>
+
+  <!-- Right side -->
+  <div class="flex items-center gap-3">
+    <!-- Lang toggle -->
+    <a
+      href={otherLangUrl}
+      class="mono text-xs px-3 py-1.5 rounded-md transition-all duration-200"
+      style="background: var(--surface); border: 1px solid var(--border); color: var(--muted);"
+    >
+      {otherLang.toUpperCase()}
+    </a>
+
+    <!-- Hire me -->
+    <a
+      href={`${base}/#contact`}
+      class="hidden md:inline-flex items-center text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
+      style="background: var(--cyan-dim); border: 1px solid var(--cyan-border); color: var(--cyan);"
+      id="hire-btn"
+    >
+      {t("nav.hire")} →
+    </a>
+
+    <!-- Mobile burger -->
+    <button id="burger" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Menu">
+      <span class="burger-line block w-5 h-0.5 rounded transition-all duration-300" style="background: var(--text);"></span>
+      <span class="burger-line block w-5 h-0.5 rounded transition-all duration-300" style="background: var(--text);"></span>
+      <span class="burger-line block w-5 h-0.5 rounded transition-all duration-300" style="background: var(--text);"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 text-xl font-medium transition-all duration-300"
+  style="background: rgba(8,12,16,0.97); backdrop-filter: blur(20px); opacity: 0; pointer-events: none;"
+>
+  <a href={`${base}/#about`} class="mobile-link" style="color: var(--muted);">{t("nav.about")}</a>
+  <a href={`${base}/#skills`} class="mobile-link" style="color: var(--muted);">{t("nav.skills")}</a>
+  <a href={`${base}/#projects`} class="mobile-link" style="color: var(--muted);">{t("nav.projects")}</a>
+  <a href={`${base}/#contact`} class="mobile-link" style="color: var(--muted);">{t("nav.contact")}</a>
+  <a href={`${base}/#contact`} class="btn-primary mt-4 text-base">{t("nav.hire")} →</a>
+</div>
+
+<style>
+  .nav-link { transition: color 0.2s; }
+  .nav-link:hover { color: var(--cyan) !important; }
+
+  #hire-btn:hover {
+    background: var(--cyan) !important;
+    color: var(--bg) !important;
+  }
+
+  .mobile-link { transition: color 0.2s; }
+  .mobile-link:hover { color: var(--cyan) !important; }
+
+  #navbar.scrolled {
+    background: rgba(8,12,16,0.85) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid var(--border);
+  }
+</style>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) navbar?.classList.add("scrolled");
+    else navbar?.classList.remove("scrolled");
+  });
+
+  // Mobile menu
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-link, #mobile-menu .btn-primary");
+  let open = false;
+
+  function toggleMenu() {
+    open = !open;
+    if (mobileMenu) {
+      mobileMenu.style.opacity = open ? "1" : "0";
+      mobileMenu.style.pointerEvents = open ? "auto" : "none";
+    }
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+
+  burger?.addEventListener("click", toggleMenu);
+  mobileLinks.forEach((l) => l.addEventListener("click", () => { if (open) toggleMenu(); }));
+</script>

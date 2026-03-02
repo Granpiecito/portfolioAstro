@@ -1,0 +1,47 @@
+---
+import { useTranslations, type Lang } from "../../i18n/index";
+import { personal } from "../../assets/js/data";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const base = lang === "es" ? "/es" : "";
+const bio = personal.bio[lang];
+const role = personal.role[lang];
+---
+
+<section class="min-h-screen flex items-center justify-center text-center px-6 pt-24 pb-16">
+  <div class="max-w-3xl mx-auto">
+
+    <!-- Badge -->
+    <div class="anim-1 inline-flex items-center gap-2 mono text-xs px-4 py-2 rounded-full mb-8"
+      style="background: var(--cyan-dim); border: 1px solid var(--cyan-border); color: var(--cyan);">
+      <span class="pulse-dot"></span>
+      {t("hero.badge")}
+    </div>
+
+    <!-- Heading -->
+    <h1 class="anim-2 font-bold tracking-tight leading-tight mb-6"
+      style="font-size: clamp(2.8rem, 6vw, 4.8rem); letter-spacing: -0.03em;">
+      {t("hero.greeting")} <span style="color: var(--cyan);">{personal.name}</span>
+      <br />
+      <span style="color: var(--text);">{role}</span>
+    </h1>
+
+    <!-- Bio -->
+    <p class="anim-3 text-base md:text-lg mb-10 mx-auto max-w-xl leading-relaxed"
+      style="color: var(--muted);">
+      {bio}
+    </p>
+
+    <!-- CTAs -->
+    <div class="anim-4 flex gap-4 justify-center flex-wrap">
+      <a href={`${base}/#projects`} class="btn-primary">{t("hero.cta.primary")}</a>
+      <a href={`${base}/#contact`} class="btn-secondary">{t("hero.cta.secondary")}</a>
+    </div>
+
+  </div>
+</section>
