@@ -1,0 +1,37 @@
+---
+import { useTranslations, type Lang } from "../../i18n/index";
+import { techs } from "../../assets/js/data";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="skills" class="py-28 px-6 max-w-5xl mx-auto">
+
+  <div class="reveal">
+    <p class="section-label">{t("tech.label")}</p>
+    <h2 class="font-bold mb-3" style="font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: -0.02em;">
+      {t("tech.title")}
+    </h2>
+    <p class="mb-12 text-sm" style="color: var(--muted);">{t("tech.sub")}</p>
+  </div>
+
+  <div class="reveal flex flex-wrap gap-3">
+    {techs.map((tech) => (
+      <div
+        class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 cursor-default"
+        style="background: var(--surface); border: 1px solid var(--border); color: var(--text);"
+        onmouseover="this.style.borderColor='var(--cyan-border)'; this.style.color='var(--cyan)'; this.style.boxShadow='0 0 20px rgba(0,245,212,0.08)';"
+        onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--text)'; this.style.boxShadow='none';"
+      >
+        <img src={tech.icon} alt={tech.name} class="w-5 h-5 object-contain" />
+        {tech.name}
+      </div>
+    ))}
+  </div>
+
+</section>

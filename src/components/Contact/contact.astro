@@ -1,0 +1,93 @@
+---
+import { useTranslations, type Lang } from "../../i18n/index";
+import { personal } from "../../assets/js/data";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="contact" class="py-28 px-6 max-w-5xl mx-auto">
+
+  <div class="reveal">
+    <p class="section-label">{t("contact.label")}</p>
+    <h2 class="font-bold mb-12" style="font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: -0.02em;">
+      {t("contact.title")}
+    </h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Info -->
+    <div class="glass rounded-2xl p-8 reveal">
+      <h3 class="text-xl font-semibold mb-3">{t("contact.heading")}</h3>
+      <p class="text-sm mb-8 leading-relaxed" style="color: var(--muted);">{t("contact.sub")}</p>
+
+      <div class="space-y-4">
+        <!-- Email -->
+        <a href={`mailto:${personal.email}`}
+          class="flex items-center gap-3 text-sm transition-colors duration-200 group"
+          style="color: var(--muted); text-decoration: none;">
+          <span class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base"
+            style="background: var(--cyan-dim); border: 1px solid var(--cyan-border);">✉️</span>
+          <span class="group-hover:text-cyan-400 transition-colors">{personal.email}</span>
+        </a>
+
+        <!-- GitHub -->
+        <a href={personal.github} target="_blank" rel="noopener"
+          class="flex items-center gap-3 text-sm transition-colors duration-200 group"
+          style="color: var(--muted); text-decoration: none;">
+          <span class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base"
+            style="background: var(--cyan-dim); border: 1px solid var(--cyan-border);">🐙</span>
+          <span class="group-hover:text-cyan-400 transition-colors">github.com/Granpiecito</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href={personal.linkedin} target="_blank" rel="noopener"
+          class="flex items-center gap-3 text-sm transition-colors duration-200 group"
+          style="color: var(--muted); text-decoration: none;">
+          <span class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base"
+            style="background: var(--cyan-dim); border: 1px solid var(--cyan-border);">💼</span>
+          <span class="group-hover:text-cyan-400 transition-colors">Leroy Perryman Alemán</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="glass rounded-2xl p-8 reveal">
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs mb-1.5" style="color: var(--muted);">{t("contact.name")}</label>
+          <input type="text" placeholder={t("contact.name.placeholder")}
+            class="w-full text-sm px-4 py-3 rounded-xl outline-none transition-all duration-200 contact-input"
+            style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); color: var(--text); font-family: inherit;" />
+        </div>
+        <div>
+          <label class="block text-xs mb-1.5" style="color: var(--muted);">{t("contact.email")}</label>
+          <input type="email" placeholder={t("contact.email.placeholder")}
+            class="w-full text-sm px-4 py-3 rounded-xl outline-none transition-all duration-200 contact-input"
+            style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); color: var(--text); font-family: inherit;" />
+        </div>
+        <div>
+          <label class="block text-xs mb-1.5" style="color: var(--muted);">{t("contact.message")}</label>
+          <textarea placeholder={t("contact.message.placeholder")} rows={4}
+            class="w-full text-sm px-4 py-3 rounded-xl outline-none transition-all duration-200 resize-y contact-input"
+            style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); color: var(--text); font-family: inherit; min-height: 100px;"></textarea>
+        </div>
+        <button class="btn-primary w-full text-center">{t("contact.send")}</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .contact-input:focus {
+    border-color: var(--cyan-border) !important;
+    box-shadow: 0 0 0 3px rgba(0, 245, 212, 0.06);
+  }
+  .group:hover span:last-child { color: var(--cyan); }
+</style>

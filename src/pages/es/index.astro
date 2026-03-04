@@ -1,18 +1,16 @@
 ---
-import Layout from "../../layouts/es/Layout.astro";
-import Separator from "../../components/Separator.astro";
-import ProfilePicture from "../../components/ProfilePicture.astro";
-import About from "../../components/About/es/About.astro";
-import Cardscontainer from "../../components/Cards/Container/es/Cardscontainer.astro";
-
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero/hero.astro";
+import About from "../../components/About/about.astro";
+import Tech from "../../components/Tech/tech.astro";
+import Projects from "../../components/Projects/projects.astro";
+import Contact from "../../components/Contact/contact.astro";
 ---
 
-<Layout title="JeanDev">
-    <main class="mt-16 scroll-mt-36" id="Home">
-        <ProfilePicture />
-        <Separator/>
-        <About/>
-        <Cardscontainer />
-  </main>
+<Layout title="JeanDev — Full Stack Developer">
+  <Hero lang="es" />
+  <About lang="es" />
+  <Tech lang="es" />
+  <Projects lang="es" />
+  <Contact lang="es" />
 </Layout>
-
