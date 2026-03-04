@@ -12,7 +12,8 @@ export const ui = {
     "nav.skills": "Skills",
     "nav.projects": "Projects",
     "nav.contact": "Contact",
-    "nav.hire": "Hire me",
+    "nav.hire": "Contact me",
+    "nav.cv": "Download CV",
 
     // Hero
     "hero.badge": "Available for freelance & full-time",
@@ -64,7 +65,8 @@ export const ui = {
     "nav.skills": "Skills",
     "nav.projects": "Proyectos",
     "nav.contact": "Contacto",
-    "nav.hire": "Contrátame",
+    "nav.hire": "Contactame",
+    "nav.cv": "Descargar CV",
 
     "hero.badge": "Disponible para freelance y tiempo completo",
     "hero.greeting": "Hola, soy",

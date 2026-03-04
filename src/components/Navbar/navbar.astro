@@ -10,6 +10,9 @@ const t = useTranslations(lang);
 const base = lang === "es" ? "/es" : "";
 const otherLang = lang === "en" ? "es" : "en";
 const otherLangUrl = lang === "en" ? "/es" : "/";
+const cvUrl = lang === "es"
+  ? "/CV Leroy Jeanpierre Perryman es.pdf"
+  : "/CV Leroy Jeanpierre Perryman en.pdf";
 ---
 
 <header
@@ -41,6 +44,20 @@ const otherLangUrl = lang === "en" ? "/es" : "/";
       {otherLang.toUpperCase()}
     </a>
 
+    <!-- Download CV -->
+    <a
+      href={cvUrl}
+      download
+      class="hidden md:inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
+      style="background: var(--surface); border: 1px solid var(--border); color: var(--muted);"
+      id="cv-btn"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      {t("nav.cv")}
+    </a>
+
     <!-- Hire me -->
     <a
       href={`${base}/#contact`}
@@ -70,12 +87,23 @@ const otherLangUrl = lang === "en" ? "/es" : "/";
   <a href={`${base}/#skills`} class="mobile-link" style="color: var(--muted);">{t("nav.skills")}</a>
   <a href={`${base}/#projects`} class="mobile-link" style="color: var(--muted);">{t("nav.projects")}</a>
   <a href={`${base}/#contact`} class="mobile-link" style="color: var(--muted);">{t("nav.contact")}</a>
+  <a href={cvUrl} download class="mobile-link flex items-center gap-2" style="color: var(--muted);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    {t("nav.cv")}
+  </a>
   <a href={`${base}/#contact`} class="btn-primary mt-4 text-base">{t("nav.hire")} →</a>
 </div>
 
 <style>
   .nav-link { transition: color 0.2s; }
   .nav-link:hover { color: var(--cyan) !important; }
+
+  #cv-btn:hover {
+    border-color: var(--cyan-border) !important;
+    color: var(--cyan) !important;
+  }
 
   #hire-btn:hover {
     background: var(--cyan) !important;

@@ -164,7 +164,15 @@ const isDashboard = project.preview === "dashboard";
   <!-- Card body -->
   <div class="p-5">
     <div class="flex justify-between items-center mb-3">
-      <span class="mono text-xs" style="color:var(--cyan); opacity:0.55;">{num}</span>
+      <!-- Project icon + number -->
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
+          style={`background: ${blob1}18; border: 1px solid ${blob1}35;`}>
+          {project.icon}
+        </div>
+        <span class="mono text-xs" style="color:var(--cyan); opacity:0.5;">{num}</span>
+      </div>
+      <!-- Links -->
       <div class="flex gap-2">
         {project.github && (
           <a href={project.github} target="_blank" rel="noopener"
@@ -190,6 +198,19 @@ const isDashboard = project.preview === "dashboard";
     <h3 class="font-semibold text-base mb-1.5 transition-colors duration-200 project-title">{project.title}</h3>
     <p class="text-sm mb-4 leading-relaxed" style="color:var(--muted);">{desc}</p>
 
+    <!-- Tech icons row -->
+    {project.techIcons.length > 0 && (
+      <div class="flex items-center gap-2 mb-4">
+        {project.techIcons.map((icon) => (
+          <div class="w-6 h-6 rounded-md flex items-center justify-center"
+            style="background: rgba(255,255,255,0.05); border: 1px solid var(--border);">
+            <img src={icon} alt="" class="w-4 h-4 object-contain" />
+          </div>
+        ))}
+      </div>
+    )}
+
+    <!-- Tags + arrow -->
     <div class="flex justify-between items-center">
       <div class="flex flex-wrap gap-1.5">
         {project.tags.map((tag) => <span class="tag">{tag}</span>)}
