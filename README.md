@@ -77,129 +77,49 @@ Inside of this Astro project, you'll see the following folders and files:
 
 ```
 portfolioAstro
+├─ .idx
+│  └─ dev.nix
 ├─ astro.config.mjs
+├─ bun.lock
 ├─ package-lock.json
 ├─ package.json
 ├─ public
-│  ├─ favicon.svg
-│  ├─ github.png
-│  ├─ github.svg
-│  ├─ Projects
-│  │  ├─ Beekeeping map
-│  │  │  ├─ apicola1.jpg
-│  │  │  └─ apicola2.jpg
-│  │  ├─ Exotic nic map
-│  │  │  ├─ Vivero1.jpg
-│  │  │  └─ vivero2.jpg
-│  │  ├─ InternifyU
-│  │  ├─ Nica places
-│  │  ├─ Portfolio
-│  │  │  ├─ portfolio1.jpg
-│  │  │  └─ portfolio2.jpg
-│  │  └─ Sime
-│  └─ Technologies
-│     ├─ Data Base
-│     │  ├─ mysql.png
-│     │  ├─ postgresql.png
-│     │  └─ sql-server.png
-│     ├─ Frameworks
-│     │  ├─ Astro_dark.png
-│     │  ├─ boostrap.png
-│     │  ├─ laravel.png
-│     │  ├─ spring.png
-│     │  ├─ svelte.png
-│     │  └─ tailwindcss.png
-│     └─ LanguagesP
-│        ├─ csharp.jpg
-│        ├─ css.png
-│        ├─ dart.png
-│        ├─ flutter.png
-│        ├─ html5.png
-│        ├─ java.png
-│        ├─ Php_dark.png
-│        └─ typescript.png
+│  ├─ CV es.pdf
+│  ├─ CV en.pdf
+│  └─ Logo
+│     └─ favicon.svg
 ├─ README.md
 ├─ src
 │  ├─ assets
-│  │  ├─ js
-│  │  │  ├─ data.js
-│  │  │  ├─ navbar-toggle.js
-│  │  │  └─ scroll-effect.js
-│  │  └─ style.css
+│  │  ├─ css
+│  │  │  └─ global.css
+│  │  └─ js
+│  │     └─ data.ts
 │  ├─ components
 │  │  ├─ About
-│  │  │  ├─ About.astro
-│  │  │  └─ es
-│  │  │     └─ About.astro
-│  │  ├─ Card.astro
-│  │  ├─ Cards
-│  │  │  ├─ Container
-│  │  │  │  ├─ Cardscontainer.astro
-│  │  │  │  └─ es
-│  │  │  │     └─ Cardscontainer.astro
-│  │  │  ├─ Info
-│  │  │  │  ├─ es
-│  │  │  │  │  └─ Info.astro
-│  │  │  │  └─ Info.astro
-│  │  │  ├─ Interesting
-│  │  │  │  ├─ es
-│  │  │  │  │  └─ Interesting.astro
-│  │  │  │  └─ Interesting.astro
-│  │  │  ├─ Projects
-│  │  │  │  ├─ Card.astro
-│  │  │  │  └─ es
-│  │  │  │     └─ Card.astro
-│  │  │  └─ Technologies
-│  │  │     ├─ es
-│  │  │     │  └─ Technolgies.astro
-│  │  │     └─ Technolgies.astro
-│  │  ├─ Footer.astro
+│  │  │  └─ about.astro
+│  │  ├─ Contact
+│  │  │  └─ contact.astro
+│  │  ├─ Footer
+│  │  │  └─ footer.astro
+│  │  ├─ Hero
+│  │  │  └─ hero.astro
 │  │  ├─ Navbar
-│  │  │  ├─ es
-│  │  │  │  └─ Navbar.astro
-│  │  │  └─ Navbar.astro
-│  │  ├─ ProfilePicture.astro
-│  │  └─ Separator.astro
-│  ├─ config
-│  │  ├─ Generatelinks.ts
-│  │  └─ i18n.ts
-│  ├─ content
-│  │  ├─ config.ts
-│  │  ├─ projects
-│  │  │  ├─ InternifyU.md
-│  │  │  ├─ MapaApicultura.md
-│  │  │  ├─ Mapavivero.md
-│  │  │  ├─ Nica Places.md
-│  │  │  ├─ Portfolio.md
-│  │  │  └─ SIME.md
-│  │  └─ proyectos
-│  │     ├─ InternifyU.md
-│  │     ├─ MapaApicultura.md
-│  │     ├─ Mapavivero.md
-│  │     ├─ Nica Places.md
-│  │     ├─ Portfolio.md
-│  │     └─ SIME.md
+│  │  │  └─ navbar.astro
+│  │  ├─ Projects
+│  │  │  ├─ ProjectCard.astro
+│  │  │  └─ projects.astro
+│  │  └─ Tech
+│  │     └─ tech.astro
 │  ├─ env.d.ts
-│  ├─ img
-│  │  ├─ Jean-dev-logo1.png
-│  │  ├─ Jean_dev_logo.svg
-│  │  └─ profileimg.png
+│  ├─ i18n
+│  │  └─ index.ts
 │  ├─ layouts
-│  │  ├─ es
-│  │  │  ├─ Layout.astro
-│  │  │  └─ ProjectsMarkdown.astro
-│  │  ├─ Layout.astro
-│  │  └─ ProjectsMarkdown.astro
+│  │  └─ Layout.astro
 │  └─ pages
 │     ├─ es
-│     │  ├─ index.astro
-│     │  ├─ proyectos
-│     │  │  └─ [...slug].astro
-│     │  └─ Proyectos.astro
-│     ├─ index.astro
-│     ├─ projects
-│     │  └─ [...slug].astro
-│     └─ Projects.astro
+│     │  └─ index.astro
+│     └─ index.astro
 ├─ tailwind.config.mjs
 └─ tsconfig.json
 
@@ -215,5 +135,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm install`             | Install the dependencies                         |
 | `npm astro add tailwind`  | Install Tailwind css dependencies                |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
-
 
